@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rango</title>
+    </head>
+
+    <body>
+        <h1>Rango says...hello world!</h1>
+
+            {% block content %}
+            <p>It is now {{ time.new() }}.</p>
+            {% endblock %}
+
+        <a href="/rango/about/">About</a>
+    </body>
+</html>

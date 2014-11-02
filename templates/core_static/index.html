@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div>
+        {% if events % }
+           
+                {% for event in events %}
+                <div>
+                <h>{{ event.title }}</h>
+                <p>{{ event.detail}}</p>
+                </div>
+                {% endfor %}
+          
+        {% else %}
+            <strong>There are no events present.</strong>
+        {% endif %}
+    </div>
+{% endblock %}
