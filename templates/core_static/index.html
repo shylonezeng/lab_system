@@ -1,19 +1,63 @@
-{% extends "base.html" %}
+{% extends 'core_static/base.html' %}
+
+{% block events %}
+ <div class=events>
+   
+    {% if events %}
+        {% for event in events %}
+        <div>
+            <h1>{{event.title}}</h1>
+            {% autoescape off %}
+                {{event.detail}}
+            {% endautoescape %}
+        </div>
+        {% endfor %}
+    {% else %}
+        <h1>There are no events currently</h1>
+    {% endif %}
+</div>
+{% endblock %}
 
 
-{% block content %}
-    <div>
-        {% if events % }
+<!--block news -->
+{% block news %}    
+    
+    <div class=news>
+            {% if newss %}
            
-                {% for event in events %}
+                {% for news in newss %}
                 <div>
-                <h>{{ event.title }}</h>
-                <p>{{ event.detail}}</p>
+                <h>{{ news.title }}</h>
+                <p>{{ news.detail}}</p>
                 </div>
                 {% endfor %}
-          
         {% else %}
-            <strong>There are no events present.</strong>
+            <strong>There are no newss present.</strong>
         {% endif %}
     </div>
+{% endblock%}
+
+{% block book_manage %}
+        <div id=manage_block>
+            <ul>
+                <li><a href="/core/borrow">借书</a></li>
+                <li>还书</li>
+                <li>预约</li>
+                <li>推荐购买</li>
+            </ul>
+        </div>
+{% endblock%}
+
+
+{% block footer_block %}
+        <table>
+            <tr>
+                <td><a href="">email to us</a>
+                </td>
+                <td>{% if username %} <a href="/core/logout">logout</a> {% else %}
+                    <a href="/core/login/">login</a> {% endif %}</td>
+                <td>{{ username }}</td>
+
+            </tr>
+        </table>   
 {% endblock %}
