@@ -19,23 +19,39 @@
             #manage_block {
                 background: #0000FF;
                 float:left;
-                width: 25%
+                width: 15%
+            }
+         }
+             #manage_block li
+            {
+                color:#00000;
+                font-size:large;
             }
             .right_slide {
                 background-color: #0000FF;
                 font-size: larger;
                 float: right;
-                width: 20%;
+                width: 30%;
             }
          #mainbody_container{
                 height:500px;
             }
+            
+            a {
+                color:#00FFFF;
+            }
+                        
+        .left_float
+        {
+            float:left;
+        }
+
         </style>
     </head>
 
     <body>
         <div>
-            <h1>lab_systen</h1>
+            <h1>lab_system</h1>
         </div>
         <div id=mainbody_container>
             <!-- id=mainbody_container-->
@@ -47,14 +63,15 @@
              <p>block news</p>
             {% endblock %}
         
+            <!--book manage block -->
             {% block book_manage %}
              <p>block book_manage</p>
             {% endblock %}
         
-            <!--book manage block -->
-        
-            <div class=right_slide>
-                slide bar
+            <div id=right_bar class=right_slide>
+                {% block right_bar%}
+                    right bar
+                {% endblock %}
             </div>
         </div>
         <div id=footer>

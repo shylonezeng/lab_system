@@ -1,43 +1,50 @@
+
 # Create your views here.
+from datetime import datetime
 from django.contrib.auth import authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth.views import login, logout
-from django.core.context_processors import request
+from django.db import transaction
 from django.http.response import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, render
 from django.template.context import RequestContext
-from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 
-from core.models import Event, News, Book, Borrow_item, Book
-from datetime import date, datetime
+from core.forms import BookForm
+from core.models import Event, News, Borrow_item, Book
+from lab_system.settings import min_datetime
 
 
 @login_required
 def restricted(request):
     return HttpResponse("Since you're logged in, you can see this text!")
 
-def index(request,name):
+def index(request,name="default"):
     # Obtain the context from the HTTP request.
     context = RequestContext(request)
-
+    if request.user.is_authenticated():
+         user=request.user
+         context['current_user']=user
+         getUserInfo(context, user)
+    else:
+        print("Debug:no active user")
     # Query the database for a list of ALL categories currently stored.
     # Order the categories by no. likes in descending order.
-    # Retrieve the top 5 only - or all if less than 5.
+    # Retrieve the top 5 only - or all if less th200an 5.
     # Place the list in our context_dict dictionary which will be passed to the template engine.
     event_list = Event.objects.order_by('-etime')[:6]
-    event_dict = {'events': event_list}
-    
-    #get new dic
+  #  event_dict = {'events': event_list} 
     news_list=News.objects.all()
-    news_dict={'newss':news_list}
+   # news_dict={'newss':news_list}
     
+    context['events']=event_list
     context['newss']=news_list;
+ 
     # Render the response and send it back!
-    return render_to_response('core_static/index.html',event_dict,context)
+    return render_to_response('core_static/index.html',{},context)
 
-def getContext(context):
+def fillContextWithEventAndNew(context):
     event_list = Event.objects.order_by('-etime')[:6]
   #  event_dict = {'events': event_list}
     
@@ -49,6 +56,17 @@ def getContext(context):
     context['newss']=news_list;
    # context['username']=user.username
     return context
+#
+def getUserInfo(context,user):
+        borrow_items=Borrow_item.objects.filter(user=user)
+        context['current_user']=user
+        not_returned=borrow_items.filter(return_time=min_datetime)
+#         count=0;
+#         for item in not_returned :
+#             count+=1;
+#             item.count=count
+        context['not_returned']=not_returned
+        context['returned']=borrow_items.exclude(return_time=min_datetime)
 
 def user_login(request):
     # Like before, obtain the context for the user's request.
@@ -77,11 +95,12 @@ def user_login(request):
                 # get context and set username 
                 current_user = request.session.get('current_user')
                 if not current_user:
-                    request.session['current_user'] = username
-   
-                getContext(context)
-                context['username']=user.username
-                return render_to_response('core_static/index.html', {}, context)
+                   request.session['current_user'] = username
+                
+                fillContextWithEventAndNew(context)
+                getUserInfo(context,user)
+                
+                return render_to_response('core_static/index.html',{},context)
             else:
                 # An inactive account was used - no logging in!
                 return HttpResponse("Your account is disabled.")
@@ -102,7 +121,7 @@ def user_login(request):
 def user_logout(request):
     # Since we know the user is logged in, we can now just log them out.
     logout(request)
-
+ #  del request.session['current_user']
     # Take the user back to the homepage.
     return HttpResponse('log out')
    # return HttpResponseRedirect('logout')
@@ -136,32 +155,119 @@ class IndexView(ListView):
 #         return context
 
 # book manage 
-def borrow(request,bookname):
+@login_required
+@transaction.commit_on_success
+def borrow(request):
+    bookname=request.GET.get('book_name','')
+    print("bookname %s"%bookname)
     context = RequestContext(request)
-    if bookname:
-        normal_books=Book.objects.get(status='normal')           
-        return render_to_response("/core/book_list.html",{'books',normal_books},context)
-        #borrow
+    normal_books=Book.objects.filter(status='normal')
+    if bookname=='':
+        #HttpResponse("book you wanna borrow not exist,please refer to system admin")
+        context['usage']='not_borrowed_booklist'
+        return render_to_response("core_static/book_list.html",{'books':normal_books},context)       
     else:
-        Book.objects.filter(name='bookname').update(status='borrowed')
+        print ("bookname not None")
         #add one borrowitem
         
         current_user=request.session.get('current_user')
         user=User.objects.get(username=current_user)
-        book=Book.objects.get(name=bookname)
-        borrowItem=Borrow_item()
+        book=None
+        try:
+            book=Book.objects.get(name=bookname,status='normal')
+        except Exception as e: 
+            return HttpResponse("no book existed which you wana borrow")
+            
+        borrowItem=Borrow_item(borrow_time=min_datetime)
         borrowItem.user=user
         borrowItem.book=book
         borrowItem.borrow_time=datetime.now()
-        borrowItem.return_time=None
-        borrow.save()
-        return  HttpResponse("borrowed succesfully");
+        borrowItem.return_time=min_datetime       
+      
+        borrowItem.save()
+        Book.objects.filter(name=bookname).update(status='borrowed')
+        
+        normal_books.exclude(status='borrowed')
+        context['message']='borrowed succesfully'
+     #   return HttpResponseRedirect('/core/index')
+        return render_to_response("core_static/book_list.html",{'books':normal_books},context)
     
-
-def returnbook(request ,bookname):
-    return
+@login_required
+@transaction.commit_on_success
+def returnbook(request):
+    bookname=request.GET.get('book_name','')
+    bookset=Book.objects.filter(name=bookname)
+    book_count=bookset.count()
+    
+    context=RequestContext(request)
+    if book_count==0:
+        #show all books not returned
+        borrow_items=Borrow_item.objects.filter(user=request.user)
+        #books_not_returned=Book.objects.select_related(user=request.user)
+        books_not_returned = set([item.book for item in borrow_items])
+        # books_not_returned=nr_items.book_set.all()
+        context['usage']='borrowed_booklist'
+        return render_to_response('core_static/book_list.html',{'books':books_not_returned},context)#('book you wanna return is loged, please ask system admin for help')
+    
+    #return borrowed book
+    real_book=bookset[0]
+    if real_book.status=='ordered':
+        #send email to someone who order it 
+        print('please send email to someone who order it ')
+    bookset.update(status='normal')
+    Borrow_item.objects.filter(book=real_book).update(return_time=datetime.now())
+    return HttpResponseRedirect('/core/index/')
+@login_required
+@transaction.commit_on_success
 def order(request):
-    return
+    bookname=request.GET.get('book_name','')
+    context = RequestContext(request)
+    #get books can be reservedautoenv-1.0.0-py2.7.egg',
+    #'/usr/local/lib/python2.7/dist-packages',
 
-def recommend(request): 
-    return
+    borrow_items=Borrow_item.objects.filter(user=request.user)
+    self_borrowed_books = set([item.book for item in borrow_items])
+    other_borrowed_books=Book.objects.filter(status='borrowed')
+    other_borrowed_books.exclude(self_borrowed_books)
+  
+    if bookname=='':
+        #HttpResponse("book you wanna borrow not exist,please refer to system admin")
+        context['usage']='other_borrowed_booklist'
+    else:
+        print("bookname %s"%bookname)
+        Book.objects.filter(name=bookname).update(status='ordered')
+        other_borrowed_books.exclude(name=bookname)#'book_name',''book_nameokname)
+        context['message']='reserved for you succesfully'
+     #   return HttpResponseRedirect('/core/index')
+    return render_to_response("core_static/book_list.html",{'books':other_borrowed_books},context)
+
+@login_required
+@transaction.commit_on_success
+def recommend(request):
+    #bookname=request.GET.get('book_name','')
+    # If it's a HTTP POST, we're interested in processing form data.
+    context = RequestContext(request)
+    if request.method == 'POST':
+        bookform=BookForm(data=request.POST)
+        print(bookform)
+ #       bookform.status='recommend'
+        if bookform.is_valid():
+            book=bookform.save(commit=False)
+            book_items=Book.objects.filter(name=book.name,author=book.author,publisher=book.publisher)
+            book_items.filter(status='recommend')
+            if book_items.count()> 1:
+                return HttpResponse('failed to recommend because it has existed in laboratory')
+            else:
+                book=bookform.save()
+             #  book.status='recommend'
+                book.save()
+                context['message']='recommend successfully'
+                return render_to_response('core_static/recommend.html/',{'book':book},context)
+        else: 
+            context['message']="data invalid"
+            return render_to_response('core_static/recommend.html/',context)
+    else:
+        #HttpResponseRedirect('/core/recommend/')
+        context['message']=""
+        return render_to_response("core_static/recommend.html", context)
+    

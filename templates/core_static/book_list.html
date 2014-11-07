@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>booklist</title>
-    </head>
+<head>
+    <title>book list</title>
+</head>
 
-    <body>
+<body>
+    {% if usage == 'borrowed_booklist' %}
+    <h1>books you have borrowed</h1>
+    {% else %}
+    <h1>book you can borrow</h1>
+    {% endif %}
+    <div id='message'>
+        <h2>{% if message %}{{message}}{% endif %}</h2>
+    </div>
+  
+    {% if books %} {% for book in books %}
+    <div>
 
-        <h1>book list</h1> {% if books %} {% for book in books %}
-        <div> {{ book.name }}| {{book.author}}|{{book.publisher}}|{{book.pub_time}} |{{book.status}}</div>
-        {% endfor %} {% endfor %} {% else %}
-        <p>no books</p>
-        {% endif %}
-      
-    </body>
+        <div style="float:left;">{{ book.name }}| {{book.author}}|{{book.publisher}}|{{book.pub_time}} |{{book.status}}</div>
+        <div>
+            <form method=get action='/core/borrow/｛{book.name}｝'> <a href='?book_name={{book.name}}'>borrow this </a>
+        </div>
+    </div>
+
+    {% endfor %} {% else %}
+    <p>no books</p>
+    {% endif %}
+
+</body>
 
 </html>

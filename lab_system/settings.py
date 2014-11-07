@@ -7,7 +7,7 @@ TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
+min_datetime='1997-01-01 00:00' # min datetime
 ADMINS = (
     ('admin', 'shylonezeng@gmail.com'),
 )
