@@ -7,10 +7,10 @@ from django.db import models
 # begin my data models
 class Book(models.Model):
     name = models.CharField(max_length=100)
-    author = models.CharField(max_length=50)
-    publisher= models.CharField(max_length=50)
+    author = models.CharField(max_length=100)
+    publisher= models.CharField(max_length=100)
     pub_time=models.DateField(null=False)
-    status=models.CharField(max_length=10)  # three status : nomal ,ordered, borrowed,recommended 
+    status=models.CharField(max_length=15)  # three status : nomal ,ordered, borrowed,recommended 
     
     def __unicode__(self):
         return self.name
@@ -25,8 +25,8 @@ class Book(models.Model):
 class Borrow_item(models.Model):  
     user = models.ForeignKey(User)
     book = models.ForeignKey(Book)
-    borrow_time = models.DateTimeField()
-    return_time = models.DateTimeField('party datetime',default=datetime.now())
+    borrow_time = models.DateTimeField(default=datetime.now())
+    return_time = models.DateTimeField()
     
     def _unicode_(self):
         return self.book.name
