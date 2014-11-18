@@ -18,7 +18,6 @@ the environment it depends
 
 how to use it 
 ----------------
-//something to be done
 - Ensure all the things it depends all well installed . Pay attention to version of pythono and django because there
-are some difference existed in, which would result in failing  otherwise.
+are some difference existed in, which would result in failure  otherwise.
 - If something unexpected happened ,please send email to shylonezeng@gmail.com.
