@@ -21,4 +21,10 @@ urlpatterns = patterns('',
         url(r'^return/$', views.returnbook, name='return'),
         url(r'^order/$', views.order, name='order'),
         url(r'^recommend/$', views.recommend, name='recommend'),
+ 
+        url(r'^news/$', views.getNewsDetail, name='news_detail'),
+        url(r'^borrow_history/$', views.getBorrowHistory, name='borrow_history'),
+        url(r'^graph/$', views.showDataGraph, name='graph'),
+ 
+ 
         )

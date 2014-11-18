@@ -1,0 +1,18 @@
+{% extends 'core_static/bases/list_base.html' %} 
+{% block content %}
+<section class="main news news-news-2014">
+
+    <h1>{% block paper_title%}paper title{% endblock %}</h1>
+    <span class="plugin_picture">
+        <img src="{% block big_picture_path %}{% endblock %}" alt=""/>
+    </span>
+    <span class="plugin_picture align-left">
+        <a href="http://www.userfriendly.org.cn/en/index/">
+            <img src="{% block logo_picture_path %}{% endblock %}" alt=""/>
+        </a>
+    </span>
+    <p>
+        {% block detail %}detail{% endblock %}
+    </p>
+</section>
+{% endblock %}

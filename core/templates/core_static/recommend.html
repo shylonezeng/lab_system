@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'core_static/bases/list_base.html' %}
+
+{% block title %}Recommend{% endblock %}
+
+
+
+{% block content %}
+    {% block other_info %}<h1>请登记你推荐图书的信息</h1>{% endblock %}
+    
+        <div id='message'>
+                <h2>{{ message }}</h2>
+         </div>
+        <form id="login_form" method="post" action="/core/recommend/">
+            {% csrf_token %}
+            name: <input type="text" name="name" value="Distributed Systems: Concepts and Design (5th Edition) " size="150" />
+            <br />
+            author: <input type="text" name="author" value="by George Coulouris (Author)" size="150" />
+            <br />
+             publisher: <input type="text" name="publisher" value="Addison-Wesley; 5 edition" size="150" />
+            <br />
+              pub_time: <input type="date" name="pub_time" value="2011-07-07" size="150" />
+            <br />
+            status: <input type="text" name="status" value="recommend" size="150" />
+            <br />
+            <input type="submit" value="submit" />
+        </form>
+{% endblock %}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+{% extends 'core_static/bases/list_base.html' %}
+
+{% block title %}borrow history{% endblock %}
+
+{% block content %} 
+        <h2>借阅历史</h2>
+  　　　<ol>
+    {% if items %} {% for item in items %}
+    <li>
+    <div >
+        <div >{{ item.book }}&nbsp;&nbsp;借阅时间：{{item.borrow_time}}&nbsp;&nbsp;还书时间：{{item.return_time}}&nbsp;&nbsp;<a href="#">[详情]</a>
+   </div>
+    </div>
+    </li>
+    {% endfor %} {% else %}
+    </ol>
+    <p>no items</p>
+    {% endif %}
+    
+    <div class="pagination">
+        <span class="step-links">
+            {% if items.has_previous %}
+                <a href="?page={{ items.previous_page_number }}">previous</a>
+            {% endif %}
+    
+            <span class="current">
+                                            【 Page {{ items.number }}/{{ items.paginator.num_pages }}】
+            </span>
+    
+            {% if items.has_next %}
+                <a href="?page={{ items.next_page_number }}">next</a>
+            {% endif %}
+        </span>
+    </div>
+{% endblock%}

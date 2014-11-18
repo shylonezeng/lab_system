@@ -1,0 +1,92 @@
+{% extends 'core_static/base.html' %}
+{% block events %}
+ <div class=events>
+   
+    {% if events %}
+        {% for event in events %}
+        <div>
+            <h1>{{event.title}}</h1>
+            {% autoescape off %}
+                {{event.detail}}
+            {% endautoescape %}
+        </div>
+        {% endfor %}
+    {% else %}
+        <h1>There are no events currently</h1>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+<!--block news -->
+{% block news %}    
+    
+    <div class=news>
+            {% if newss %}
+           
+                {% for news in newss %}
+                <div>
+                <h>{{ news.title }}</h>
+                <p>{{ news.detail}}</p>
+                </div>
+                {% endfor %}
+        {% else %}
+            <strong>There are no newss present.</strong>
+        {% endif %}
+    </div>
+{% endblock%}
+
+{% block book_manage %}
+        <div id=manage_block>
+            <ul>
+                <li><a href="/core/borrow/">借书</a></li>
+                <li><a href="/core/return/">还书</a></li>
+                <li><a href="/core/order/">预约</a></li>
+                <li><a href="/core/recommend/">推荐购买</a></li>
+            </ul>
+        </div>
+{% endblock%}
+
+{% block right_bar%}
+    <div class=left_float　style="width:50%" >
+        <div>NOT RETURNED</div>
+        {% if not_returned%}
+        {% for item in not_returned %}
+        <div>
+            <p>{{item.book}}</p>
+            <a href='/core/return/?book_name={{item.book}}'>｜return</a>
+        </div>
+        {% endfor %}
+           {% else %}
+          <div>empty books not returned</div>
+          {% endif%}
+    </div>
+    <div >
+        <div>RETURNED</div>
+        
+        {% if returned %}
+        <ol>
+             {% for item in returned %}
+        <div>
+            <li>{{item.book}}</li>
+            <a href='/core/book_detail/?book_name={{item.book}}'>【{{ item.return_time }}】detail</a>
+        </div>
+              {% endfor %}        
+        </ol>
+        {% else %}
+            <div>no borrow history</div>  
+        {% endif%}
+    </div>
+{% endblock %}
+    
+
+{% block footer_block %}
+        <table>
+            <tr>
+                <td><a href="">email to us</a>
+                </td>
+                <td>{% if current_user %} <a href="/core/logout">logout</a> <td>{{ current_user }}</td> {% else %}
+                    <a href="/core/login/">login</a> {% endif %}</td>
+            </tr>
+        </table>   
+{% endblock %}

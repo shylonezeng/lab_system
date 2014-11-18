@@ -1,0 +1,2580 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HAML or equivalent:
+ * %link{href:"{% static 'css/screen.css' %}", media:"screen, projection", rel:"stylesheet", type:"text/css"}
+ */
+/* $container-right-margin: 55px; */
+/* ****************************************************************************** */
+/* ****************************************************************************** */
+/* ****************************************************************************** */
+/* FB request */
+/* ****************************************************************************** */
+/* the main nav block */
+/* line 18, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper {
+  position: relative;
+}
+/* line 21, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block {
+  position: relative;
+  margin-top: -1px;
+  /* Removing 1px horizontal line at top of browser */
+  margin-left: 50px;
+  z-index: 300;
+  background: black;
+  color: white;
+  font-size: .95em;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+/* line 33, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search form {
+  margin: 1em 0em 0.5em 0em;
+}
+/* line 36, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
+  color: #000000;
+  font-family: Chivo, sans-serif;
+  font-size: 1em;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+/* line 46, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search input::-webkit-input-placeholder {
+  color: #000000;
+  font-family: Chivo, sans-serif;
+  padding-left: 0em;
+}
+/* line 52, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search:-moz-placeholder, #nav-block-wrapper #nav-block #nav-block-search:-ms-input-placeholder {
+  color: #000000;
+  font-family: Chivo, sans-serif;
+}
+/* line 56, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search input[type="text"] {
+  color: #000000;
+  font-family: Chivo, sans-serif;
+  padding-left: 0em;
+  width: 95%;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+}
+/* line 63, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search ul {
+  margin-bottom: 0;
+}
+/* line 66, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-search li {
+  margin: 0;
+  list-style-type: none;
+}
+/* line 72, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form {
+  font-family: 'Chivo', sans-serif;
+  margin-top: 0em;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 77, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form p {
+  margin-bottom: 0em;
+}
+/* line 80, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form p.messages, #nav-block-wrapper #nav-block #nav-block-info form.contact-form ul.errorlist li {
+  color: red;
+  font-size: 0.75em;
+}
+/* line 84, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form p.messages {
+  margin-bottom: 1em;
+}
+/* line 87, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form input[type="text"], #nav-block-wrapper #nav-block #nav-block-info form.contact-form select, #nav-block-wrapper #nav-block #nav-block-info form.contact-form textarea {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #FFFFFF;
+  border: none;
+  color: #000000;
+  opacity: 0.66;
+  filter: alpha(opacity=66);
+  zoom: 1;
+  padding-left: 0.25em;
+}
+/* line 94, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form input[type="text"] placeholder, #nav-block-wrapper #nav-block #nav-block-info form.contact-form select placeholder, #nav-block-wrapper #nav-block #nav-block-info form.contact-form textarea placeholder {
+  color: #999999;
+}
+/* line 98, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form select {
+  width: 264px;
+}
+/* line 101, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form textarea {
+  height: 80px;
+  padding-left: 0.25em;
+}
+/* line 105, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-info form.contact-form input[type="submit"] {
+  background-color: #000000;
+  border: none;
+  color: #FFFFFF;
+  font-family: 'Chivo', sans-serif;
+  font-weight: bold;
+  padding: 0.25em 1em;
+  -webkit-box-shadow: #a6a6a6 2px 2px 10px;
+  -moz-box-shadow: #a6a6a6 2px 2px 10px;
+  box-shadow: #a6a6a6 2px 2px 10px;
+}
+/* line 116, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-logo {
+  padding: 35px;
+}
+/* line 119, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-logo a {
+  display: block;
+  color: transparent;
+  background: url(../img/logo_ID_full.png) no-repeat 0 0;
+  height: 20px;
+  width: 180px;
+}
+/* line 125, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block #nav-block-logo a:hover {
+  background-position: 0 -20px;
+}
+/* line 132, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons {
+  position: absolute;
+  top: 0;
+  right: -55px;
+}
+/* line 136, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons li {
+  width: 55px;
+  height: 55px;
+  margin-left: 1px;
+  margin-bottom: 1px;
+  background: black;
+}
+/* line 144, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons #icon-pencil {
+  background: url(../img/pencil-icon.png) no-repeat 0 0;
+}
+/* line 146, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons #icon-pencil:hover, #nav-block-wrapper #nav-block-icons #icon-pencil .icon-active {
+  background-position: -55px 0;
+}
+/* line 150, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons #icon-info {
+  background: url(../img/info-icon.png) no-repeat 0 0;
+}
+/* line 153, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons #icon-search {
+  background: url(../img/search-icon.png) no-repeat 0 0;
+}
+/* line 156, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-block-wrapper #nav-block-icons #icon-pencil:hover, #nav-block-wrapper #nav-block-icons #icon-info:hover, #nav-block-wrapper #nav-block-icons #icon-search:hover, #nav-block-wrapper #nav-block-icons #icon-search.icon-active, #nav-block-wrapper #nav-block-icons #icon-pencil.icon-active, #nav-block-wrapper #nav-block-icons #icon-info.icon-active {
+  background-position: -55px 0;
+}
+
+/* ****************************************************************************** */
+/* accordion classes */
+/* line 166, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion {
+  margin-bottom: 0;
+  padding-top: 2.25em;
+}
+
+/* line 171, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion-inner {
+  border-top: none;
+  padding: 0 15px;
+}
+
+/* line 176, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion-group {
+  border: none;
+}
+
+/* line 180, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion-inner ul {
+  left: 0;
+  margin-left: 20px;
+  top: 0;
+}
+/* line 184, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion-inner ul li {
+  list-style-type: none;
+}
+
+/* line 189, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion-heading .accordion-toggle {
+  padding: 0 0 0 35px;
+}
+
+/* line 193, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.accordion-inner li a:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/* line 198, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.carat {
+  display: none;
+}
+
+/* line 202, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.ancestor .carat {
+  display: none;
+  margin-left: -10px;
+}
+
+/* Nested styling for horizontal Nav, color specific  */
+/* line 210, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion {
+  /*Degree Programs, About */
+  /*Engagement Opportunities, Research + Projects */
+  /* Conferences + Events, Community */
+}
+/* line 211, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion a {
+  color: #a6a6a6;
+  text-decoration: none;
+}
+/* line 217, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(1) .accordion-heading a.ancestor, #nav-accordion .accordion-group:nth-child(2) .accordion-heading a.ancestor {
+  color: #eec500;
+}
+/* line 219, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(1) .accordion-heading a.ancestor:before, #nav-accordion .accordion-group:nth-child(2) .accordion-heading a.ancestor:before {
+  content: none;
+}
+/* line 224, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(1) .accordion-heading a:focus, #nav-accordion .accordion-group:nth-child(1) .accordion-heading a:active, #nav-accordion .accordion-group:nth-child(1) .accordion-heading a:hover, #nav-accordion .accordion-group:nth-child(2) .accordion-heading a:focus, #nav-accordion .accordion-group:nth-child(2) .accordion-heading a:active, #nav-accordion .accordion-group:nth-child(2) .accordion-heading a:hover {
+  color: #eec500;
+  text-decoration: none;
+}
+/* line 233, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(3) .accordion-heading a.ancestor, #nav-accordion .accordion-group:nth-child(4) .accordion-heading a.ancestor {
+  color: #00a8cb;
+}
+/* line 237, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(3) .accordion-heading a, #nav-accordion .accordion-group:nth-child(4) .accordion-heading a {
+  /*       display:inline-block; */
+}
+/* line 238, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(3) .accordion-heading a:focus, #nav-accordion .accordion-group:nth-child(3) .accordion-heading a:active, #nav-accordion .accordion-group:nth-child(3) .accordion-heading a:hover, #nav-accordion .accordion-group:nth-child(4) .accordion-heading a:focus, #nav-accordion .accordion-group:nth-child(4) .accordion-heading a:active, #nav-accordion .accordion-group:nth-child(4) .accordion-heading a:hover {
+  color: #00a8cb;
+  text-decoration: none;
+}
+/* line 247, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(5) .accordion-heading a.ancestor, #nav-accordion .accordion-group:nth-child(6) .accordion-heading a.ancestor {
+  color: #4eba13;
+}
+/* line 252, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-group:nth-child(5) .accordion-heading a:focus, #nav-accordion .accordion-group:nth-child(5) .accordion-heading a:active, #nav-accordion .accordion-group:nth-child(5) .accordion-heading a:hover,
+#nav-accordion .accordion-group:nth-child(5) .accordion-heading a:link:focus,
+#nav-accordion .accordion-group:nth-child(5) .accordion-heading a:link:active,
+#nav-accordion .accordion-group:nth-child(5) .accordion-heading a:link:hover, #nav-accordion .accordion-group:nth-child(6) .accordion-heading a:focus, #nav-accordion .accordion-group:nth-child(6) .accordion-heading a:active, #nav-accordion .accordion-group:nth-child(6) .accordion-heading a:hover,
+#nav-accordion .accordion-group:nth-child(6) .accordion-heading a:link:focus,
+#nav-accordion .accordion-group:nth-child(6) .accordion-heading a:link:active,
+#nav-accordion .accordion-group:nth-child(6) .accordion-heading a:link:hover {
+  color: #4eba13;
+  text-decoration: none;
+}
+
+/* Inserting Double Carats on Rollover */
+/* line 262, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion {
+  /***************************************************************************/
+  /* Color targeting for submenus */
+}
+/* line 265, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner li:before {
+  content: "\00BB \0020 \0020 \0020";
+  color: #000000;
+  padding-right: 2px;
+}
+/* line 270, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner li a {
+  color: #FFFFFF;
+}
+/* line 272, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner li a:hover {
+  margin-left: -11px;
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 276, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner li a:hover:before {
+  content: "\00BB \0020 \0020 \0020";
+  padding-right: 2px;
+}
+/* line 282, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner li a.active {
+  color: #a6a6a6;
+}
+/* line 284, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner li a.active:hover {
+  margin-left: 0px;
+}
+/* line 290, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner:nth-child(1) a.active, #nav-accordion .accordion-inner:nth-child(6) a.active {
+  color: #eec500;
+}
+/* line 292, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion .accordion-inner:nth-child(1) a.active:before, #nav-accordion .accordion-inner:nth-child(6) a.active:before {
+  content: none;
+}
+/* line 304, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse2 .accordion-inner li a:hover, #nav-accordion #collapse7 .accordion-inner li a:hover {
+  color: #eec500;
+}
+/* line 308, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse2 .accordion-inner li a.active, #nav-accordion #collapse2 .accordion-inner li a.active:hover, #nav-accordion #collapse7 .accordion-inner li a.active, #nav-accordion #collapse7 .accordion-inner li a.active:hover {
+  color: #eec500;
+}
+/* line 310, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse2 .accordion-inner li a.active:before, #nav-accordion #collapse2 .accordion-inner li a.active:hover:before, #nav-accordion #collapse7 .accordion-inner li a.active:before, #nav-accordion #collapse7 .accordion-inner li a.active:hover:before {
+  content: "\00BB \0020 \0020 \0020";
+  padding-right: 2px;
+  margin-left: -11px;
+}
+/* line 323, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse3 .accordion-inner li a:hover, #nav-accordion #collapse4 .accordion-inner li a:hover {
+  color: #00a8cb;
+}
+/* line 327, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse3 .accordion-inner li a.active, #nav-accordion #collapse3 .accordion-inner li a.active:hover, #nav-accordion #collapse4 .accordion-inner li a.active, #nav-accordion #collapse4 .accordion-inner li a.active:hover {
+  color: #00a8cb;
+}
+/* line 329, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse3 .accordion-inner li a.active:before, #nav-accordion #collapse3 .accordion-inner li a.active:hover:before, #nav-accordion #collapse4 .accordion-inner li a.active:before, #nav-accordion #collapse4 .accordion-inner li a.active:hover:before {
+  content: "\00BB \0020 \0020 \0020";
+  padding-right: 2px;
+  margin-left: -11px;
+}
+/* line 342, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse6 .accordion-inner li a:hover, #nav-accordion #collapse10 .accordion-inner li a:hover {
+  color: #4eba13;
+}
+/* line 346, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse6 .accordion-inner li a.active, #nav-accordion #collapse6 .accordion-inner li a.active:hover, #nav-accordion #collapse10 .accordion-inner li a.active, #nav-accordion #collapse10 .accordion-inner li a.active:hover {
+  color: #4eba13;
+}
+/* line 348, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+#nav-accordion #collapse6 .accordion-inner li a.active:before, #nav-accordion #collapse6 .accordion-inner li a.active:hover:before, #nav-accordion #collapse10 .accordion-inner li a.active:before, #nav-accordion #collapse10 .accordion-inner li a.active:hover:before {
+  content: "\00BB \0020 \0020 \0020";
+  padding-right: 2px;
+  margin-left: -11px;
+}
+
+/* ****************************************************************************** */
+/* callouts */
+/* line 365, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.nav-block-callout {
+  background: #ffdd00;
+  border-radius: 0 0 0 0;
+  border: none;
+  content: none;
+  display: none;
+  color: #000;
+  font-size: 1.286em;
+  margin: 0;
+  padding: 1em 1em 1em 1em;
+}
+/* line 375, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.nav-block-callout a {
+  color: black;
+  text-decoration: underline;
+}
+
+/* ****************************************************************************** */
+/* navbar */
+@media (min-width: 767px) {
+  /* line 385, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar-fixed-top {
+    /*     display: none; */
+  }
+
+  /* line 388, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar ul.nav li {
+    margin-right: 0em;
+  }
+}
+/* line 395, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar .navbar-inner {
+  background-image: none;
+  background-color: #000000;
+}
+/* line 399, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar .brand {
+  background: url(../img/logo_ID.png) no-repeat 0 0;
+  padding: 15px 10px 17px 10px;
+  border-right: 1px solid white;
+  height: 20px;
+  width: 32px;
+}
+/* line 405, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar .brand:hover {
+  background-position: 0 -55px;
+}
+@media (max-width: 767px) {
+  /* line 399, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .brand {
+    background: url(../img/logo_ID_mobile.png) no-repeat 0 0;
+    border-right: none;
+    margin-left: 12px;
+    padding: 15px 0px 17px 0px;
+    width: 220px;
+  }
+  /* line 414, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .brand:hover {
+    background-position: 0 -55px;
+  }
+}
+/* line 419, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav {
+  min-height: 52px;
+  /* Prevents Horizontal Nav from growing on RO */
+  margin-left: 1em;
+  /* FB request  #55163 */
+}
+/* line 422, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li {
+  font-size: 13px;
+  line-height: 1.15em;
+  margin-right: 1.5em;
+  /*** Setting dropdown distance for horizontal Nav items on one line**/
+}
+/* line 426, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li a, .navbar ul.nav li a:link {
+  color: #d9d9d9;
+}
+/* line 429, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li .open {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #000000;
+}
+/* line 436, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul.dropdown-menu li {
+  line-height: normal;
+}
+/* line 438, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul.dropdown-menu li:before {
+  color: #000000;
+  padding-right: 2px;
+}
+/* line 443, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul.dropdown-menu li a:hover {
+  color: #4eba13;
+  margin-left: 0px;
+}
+/* line 446, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul.dropdown-menu li a:hover:before {
+  content: "\00BB \0020 \0020 \0020";
+  padding-right: 2px;
+}
+/* line 455, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(1), .navbar ul.nav li:nth-child(2) {
+  border-top-color: #eec500;
+}
+/* line 460, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(1) a.dropdown-toggle:hover, .navbar ul.nav li:nth-child(1) a.dropdown-toggle:focus, .navbar ul.nav li:nth-child(1) a.dropdown-toggle:active, .navbar ul.nav li:nth-child(2) a.dropdown-toggle:hover, .navbar ul.nav li:nth-child(2) a.dropdown-toggle:focus, .navbar ul.nav li:nth-child(2) a.dropdown-toggle:active {
+  color: #eec500;
+  border-top: 2px solid #eec500;
+}
+/* line 465, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(1) ul.dropdown-menu, .navbar ul.nav li:nth-child(2) ul.dropdown-menu {
+  border-bottom: 4px solid #eec500;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+/* line 470, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(1) ul.dropdown-menu a:hover, .navbar ul.nav li:nth-child(2) ul.dropdown-menu a:hover {
+  color: #eec500;
+}
+/* line 476, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(1).horiz-ancestor, .navbar ul.nav li:nth-child(2).horiz-ancestor {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #eec500;
+}
+/* line 482, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(3), .navbar ul.nav li:nth-child(4) {
+  border-top-color: #00a8cb;
+}
+/* line 487, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(3) a.dropdown-toggle:hover, .navbar ul.nav li:nth-child(3) a.dropdown-toggle:focus, .navbar ul.nav li:nth-child(3) a.dropdown-toggle:active, .navbar ul.nav li:nth-child(4) a.dropdown-toggle:hover, .navbar ul.nav li:nth-child(4) a.dropdown-toggle:focus, .navbar ul.nav li:nth-child(4) a.dropdown-toggle:active {
+  color: #00a8cb;
+  border-top: 2px solid #00a8cb;
+}
+/* line 492, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(3) ul.dropdown-menu, .navbar ul.nav li:nth-child(4) ul.dropdown-menu {
+  border-bottom: 4px solid #00a8cb;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+}
+/* line 497, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(3) ul.dropdown-menu a:hover, .navbar ul.nav li:nth-child(4) ul.dropdown-menu a:hover {
+  color: #00a8cb;
+}
+/* line 504, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(3).horiz-ancestor, .navbar ul.nav li:nth-child(4).horiz-ancestor {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #00a8cb;
+}
+/* line 510, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(5), .navbar ul.nav li:nth-child(6) {
+  border-top-color: #4eba13;
+}
+/* line 515, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(5) a.dropdown-toggle:hover, .navbar ul.nav li:nth-child(5) a.dropdown-toggle:focus, .navbar ul.nav li:nth-child(5) a.dropdown-toggle:active, .navbar ul.nav li:nth-child(6) a.dropdown-toggle:hover, .navbar ul.nav li:nth-child(6) a.dropdown-toggle:focus, .navbar ul.nav li:nth-child(6) a.dropdown-toggle:active {
+  color: #4eba13;
+  border-top: 2px solid #4eba13;
+}
+/* line 520, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(5) ul.dropdown-menu, .navbar ul.nav li:nth-child(6) ul.dropdown-menu {
+  border-bottom: 4px solid #4eba13;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  margin-top: 1px;
+}
+/* line 527, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(5) ul.dropdown-menu li a:hover, .navbar ul.nav li:nth-child(6) ul.dropdown-menu li a:hover {
+  color: #4eba13;
+  margin-left: 0px;
+}
+/* line 536, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(5).horiz-ancestor, .navbar ul.nav li:nth-child(6).horiz-ancestor {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: #4eba13;
+}
+/* line 542, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul {
+  color: #FFFFFF;
+  background-color: black;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  margin-top: 0px;
+  /*Global styling for horizontal menu dropdowns */
+}
+/* line 548, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul li {
+  margin: 0 0;
+}
+/* line 550, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul li:nth-last-child(1) {
+  padding-bottom: 1.25em;
+}
+@media (max-width: 979px) {
+  /* line 550, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar ul.nav li ul li:nth-last-child(1) {
+    padding-bottom: 0px;
+    border: none;
+  }
+}
+/* line 557, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li ul li a, .navbar ul.nav li ul li a:hover, .navbar ul.nav li ul li a:active {
+  color: #d9d9d9;
+  background-color: #000;
+  background-image: none;
+  font-size: 13px;
+  margin-left: 11px;
+  margin-right: 15px;
+}
+/* line 569, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li:nth-child(1) ul.dropdown-menu, .navbar ul.nav li:nth-child(6) ul.dropdown-menu {
+  margin-top: 13px;
+  /* position dropdown menus to align */
+}
+/* line 574, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li.horiz-ancestor {
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+/* line 577, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar ul.nav li.horiz-ancestor:hover {
+  border-top-width: 0px;
+}
+
+/*** Horizontal Menu Search Bar ***/
+/* line 587, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse {
+  /* Overriding Bootstrap backgrouond color */
+}
+/* line 592, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #000000;
+}
+/* line 597, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search {
+  height: 20px;
+  margin: 0 0;
+  background-color: transparent;
+  border-bottom: 1px solid #a6a6a6;
+  padding: 5px 0px 10px 0px;
+}
+/* line 603, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search input[type="submit"] {
+  /*       background: url("../img/horiz_nav_search.png") no-repeat 0 0; */
+  border: none;
+  background-color: transparent;
+  /*       border-bottom: 1px solid #a6a6a6; */
+  height: 20px;
+  margin-left: -30px;
+  padding: 0px 10px;
+}
+/* line 612, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search .search-query {
+  background-color: transparent;
+  background: url("../img/horiz_nav_search01.png") no-repeat 180px 5px;
+  border: none;
+  /*       border-bottom: 1px solid #a6a6a6; */
+  color: #a6a6a6;
+  font-family: Chivo, sans-serif;
+  font-size: 1em;
+  padding: 5px 0px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+/* line 623, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search .search-query input::-webkit-input-placeholder {
+  color: #000000;
+  font-family: Chivo, sans-serif;
+  padding-left: 0em;
+}
+/* line 629, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search .search-query:-moz-placeholder, .navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
+  color: #000000;
+  font-family: Chivo, sans-serif;
+}
+/* line 633, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search .search-query input[type="text"] {
+  color: #000000;
+  font-family: Chivo, sans-serif;
+  padding-left: 0em;
+  width: 95%;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+}
+/* line 640, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar-inverse .navbar-search .search-query:focus {
+  padding: 5px 0px;
+  background-color: transparent;
+  background: url("../img/horiz_nav_search02.png") no-repeat 180px 5px;
+  border-bottom: 1px solid #eec500;
+  text-shadow: none;
+  color: #FFFFFF;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+}
+
+/* ****************************************************************************** */
+/*** Override Bootstrap default for subnav carat */
+/* line 658, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+.navbar .nav > li > .dropdown-menu:before, .navbar .nav > li > .dropdown-menu:after {
+  content: none;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+
+/*** Media Overrides for Horizontal Nav Stylings ***/
+@media (min-width: 980px) and (max-width: 1200px) {
+  /* line 666, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .nav > li > a {
+    padding: 10px 5px 10px 3px;
+    /*To fit Horizontal nav on one line for this screen range */
+  }
+}
+/*** Media overrides for Large Desktop **/
+@media (min-width: 1200px) {
+  /* line 674, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  #nav-block-info form.contact-form input[type="text"], #nav-block-info form.contact-form select, #nav-block-info form.contact-form textarea {
+    min-width: 330px;
+  }
+}
+/*** Media Overrides for Horizontal Nav Stylings  on Phone***/
+@media (max-width: 979px) {
+  /* line 684, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner {
+    padding: 0px 5px;
+    /* Remove spacing on fixed-top horixzontal Nav  */
+    /* .nav-collapse */
+  }
+  /* line 686, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in {
+    border-top: 1px solid #FFFFFF;
+    padding: 10px 10px 10px 10px;
+  }
+  /* line 691, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li.open ul.dropdown-menu {
+    border: none;
+    display: block;
+    /* Enables dropdown collapse at Mobile size */
+  }
+  /* line 696, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li {
+    margin-bottom: 10px;
+  }
+  /* line 698, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li a, .navbar .navbar-inner .in ul.nav li a:link {
+    font-size: 13px;
+    font-weight: normal;
+    border: none;
+    padding: 0 0;
+    background-color: transparent;
+  }
+  /* line 704, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li a:hover, .navbar .navbar-inner .in ul.nav li a:link:hover {
+    border: none;
+  }
+  /* line 707, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li a br, .navbar .navbar-inner .in ul.nav li a:link br {
+    display: none;
+    /* Overriding line break at small widths */
+  }
+  /* line 711, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li ul.dropdown-menu {
+    border: none;
+    display: none;
+    /*Overriding bootstrap to enable collapse dropdown */
+  }
+  /* line 714, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li ul.dropdown-menu li {
+    margin-bottom: 0px;
+  }
+  /* line 718, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li .navbar-search {
+    border-bottom: 1px solid #a6a6a6;
+    width: 100%;
+  }
+  /* line 721, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li .navbar-search input {
+    width: 100%;
+    background-position-x: right;
+  }
+  /* line 727, /Users/mlineen/code/iit/code/iit_id_cms/sass/menustuff.scss */
+  .navbar .navbar-inner .in ul.nav li.horiz-ancestor {
+    border: none;
+  }
+}
+/* BACKGROUND AND BASE STYLES */
+/* line 16, ../../sass/screen.scss */
+html, body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 21, ../../sass/screen.scss */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+}
+
+/* line 28, ../../sass/screen.scss */
+body {
+  font-family: Chivo, sans-serif;
+  background-color: #f7f7f7;
+  color: #666666;
+}
+/* line 32, ../../sass/screen.scss */
+body select, body textarea {
+  font-family: 'Chivo', sans-serif;
+}
+
+/* line 38, ../../sass/screen.scss */
+#push,
+footer {
+  height: 60px;
+}
+
+/* line 42, ../../sass/screen.scss */
+footer {
+  background-color: black;
+  color: #a6a6a6;
+  font-size: 12px;
+}
+/* line 47, ../../sass/screen.scss */
+footer .row {
+  margin: 10px 0;
+}
+/* line 51, ../../sass/screen.scss */
+footer .footer-text {
+  font-size: 10px;
+  line-height: 12px;
+  margin-top: 2px;
+}
+/* line 57, ../../sass/screen.scss */
+footer strong {
+  color: white;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+/* line 63, ../../sass/screen.scss */
+footer a {
+  color: #a6a6a6;
+  border-bottom: 1px solid #eec500;
+}
+/* line 66, ../../sass/screen.scss */
+footer a:hover {
+  color: #a6a6a6;
+  border-bottom: none;
+  text-decoration: none;
+}
+/* line 73, ../../sass/screen.scss */
+footer .contact-us {
+  margin-right: 20px;
+  font-size: 13px;
+}
+/* line 79, ../../sass/screen.scss */
+footer .social-icons a {
+  opacity: 0.66;
+  filter: alpha(opacity=66);
+  zoom: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  border-bottom: none;
+  width: 16px;
+  height: 16px;
+}
+/* line 88, ../../sass/screen.scss */
+footer .social-icons a:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+/* line 93, ../../sass/screen.scss */
+footer .social-icons .social-icon-fb {
+  background: url("../img/icon_fb.png") no-repeat;
+}
+/* line 97, ../../sass/screen.scss */
+footer .social-icons .social-icon-twitter {
+  background: url("../img/icon_twitter.png") no-repeat;
+}
+/* line 100, ../../sass/screen.scss */
+footer .social-icons .social-icon-linkedin {
+  background: url("../img/icon_linkedin.png") no-repeat;
+}
+/* line 104, ../../sass/screen.scss */
+footer .social-icons .social-icon-flickr {
+  background: url("../img/icon_flickr.png") no-repeat;
+}
+/* line 108, ../../sass/screen.scss */
+footer .social-icons .social-icon-vimeo {
+  background: url("../img/icon_vimeo.png") no-repeat;
+}
+
+@media (max-width: 767px) {
+  /* line 115, ../../sass/screen.scss */
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 768px) {
+  /* line 124, ../../sass/screen.scss */
+  #body-container {
+    margin-right: 55px;
+  }
+}
+/* Fix to intermediate width */
+@media (max-width: 979px) and (min-width: 768px) {
+  /* line 132, ../../sass/screen.scss */
+  #body-container {
+    margin-right: auto;
+    /* Taking out spacing for intermediate sizes */
+  }
+  /* line 134, ../../sass/screen.scss */
+  #body-container .span8 {
+    width: 100%;
+  }
+}
+/* Fix to Sidebar when using top fixed Horizontal Nav */
+@media (max-width: 979px) {
+  /* line 144, ../../sass/screen.scss */
+  .span4 {
+    width: 100%;
+  }
+}
+/* line 150, ../../sass/screen.scss */
+h1 {
+  color: #000;
+  font: normal 900 36px/40px Chivo, sans-serif;
+  /* Global Font-sizing */
+  margin-bottom: 18px;
+}
+
+/* line 156, ../../sass/screen.scss */
+h2 {
+  color: #000;
+  /*   font-size: 1.857em; */
+  font: normal 900 24px/28px Chivo, sans-serif;
+  /* Global Font-sizing */
+  padding-top: 1em;
+}
+
+/* line 163, ../../sass/screen.scss */
+h3 {
+  color: #000;
+  font: normal 900 16px/20px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+
+/* line 168, ../../sass/screen.scss */
+h4 {
+  color: #404040;
+  font: normal 900 13px/16px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+
+/* line 173, ../../sass/screen.scss */
+p {
+  color: #595959;
+  /* #666666; */
+  font: normal 400 16px/24px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+
+/* line 178, ../../sass/screen.scss */
+strong {
+  color: #000000;
+  font-weight: 900;
+  font-size: 15px \0/IE89;
+  /* IE8 + 9 + IE10pp4 */
+}
+
+/* line 184, ../../sass/screen.scss */
+em {
+  color: #000000;
+  font-weight: 400;
+}
+
+/* */
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.main p a, section.main p a:link,
+section.secondary p a,
+section.secondary p a:link,
+section.sidebar p a,
+section.sidebar p a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.main p a:hover, section.main p a:link:hover,
+section.secondary p a:hover,
+section.secondary p a:link:hover,
+section.sidebar p a:hover,
+section.sidebar p a:link:hover {
+  border: none;
+}
+
+/* line 198, ../../sass/screen.scss */
+.plugin_link a, .plugin_link a:link {
+  color: #000000;
+  border-bottom: 1px solid #eec500;
+  text-decoration: none;
+}
+/* line 202, ../../sass/screen.scss */
+.plugin_link a:hover, .plugin_link a:link:hover {
+  border-bottom: 0px solid #eec500;
+}
+
+/* line 208, ../../sass/screen.scss */
+section ul {
+  list-style: square;
+}
+
+/* line 211, ../../sass/screen.scss */
+section li {
+  color: #595959;
+  font: normal 400 16px/24px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section li span.plugin_link a, section li span.plugin_link a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section li span.plugin_link a:hover, section li span.plugin_link a:link:hover {
+  border: none;
+}
+
+/* line 219, ../../sass/screen.scss */
+.watermark {
+  background: url("../img/watermark.png") #f7f7f7 no-repeat 2em 1.5em;
+}
+
+/* line 223, ../../sass/screen.scss */
+.shadow {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: #d7d7d7 2px 2px 10px;
+  -moz-box-shadow: #d7d7d7 2px 2px 10px;
+  box-shadow: #d7d7d7 2px 2px 10px;
+  margin: 0 0;
+}
+/* line 227, ../../sass/screen.scss */
+.shadow section.main {
+  background: no-repeat 2em bottom transparent;
+  padding: 2em 2em 54px 2em;
+  /*     margin-bottom: 2em; */
+}
+
+/* line 234, ../../sass/screen.scss */
+.right-borders {
+  /*border-right: 1px solid $linegray;*/
+  margin-left: -1px;
+  padding-bottom: 2em;
+  /*padding: 1em 3.98em 1em 0em;*/
+}
+
+/* MAIN AND SECONDARY CONTENT */
+/* line 244, ../../sass/screen.scss */
+#spacer {
+  /*border-right: 1px solid #CCCCCC;*/
+  height: 3.5em;
+  margin-left: 26px;
+}
+
+/* line 254, ../../sass/screen.scss */
+.main p:nth-of-type(1) {
+  margin-top: 36px;
+  /* Sets first P to larger spacing */
+}
+/* line 258, ../../sass/screen.scss */
+.main p {
+  margin-top: 18px;
+}
+
+/* line 263, ../../sass/screen.scss */
+.main h2 {
+  margin: 0 0;
+}
+
+/* line 268, ../../sass/screen.scss */
+.caption {
+  font-size: 0.857em;
+  line-height: 1.286em;
+}
+
+/* EVENTS */
+/* line 276, ../../sass/screen.scss */
+.event-summary {
+  /*   height: 500px; */
+  overflow: hidden;
+  border-width: 2px;
+  border-color: gray;
+}
+
+/* line 284, ../../sass/screen.scss */
+.event img {
+  padding: 0em 0 2.143em 0;
+}
+/* line 287, ../../sass/screen.scss */
+.event .info {
+  display: block;
+  border-style: solid none;
+  border-width: 1px;
+  border-color: #4eba13;
+  float: right;
+  font-size: 12px;
+  margin-left: 5px;
+  padding: 5px;
+  width: 235px;
+}
+/* line 297, ../../sass/screen.scss */
+.event .info b {
+  color: #4eba13;
+}
+/* line 300, ../../sass/screen.scss */
+.event .info p {
+  padding: 0em 0em 0.2em 0em;
+  margin: 0 0;
+}
+
+/* aligned plugins in content */
+/* line 308, ../../sass/screen.scss */
+.align-right {
+  float: right;
+}
+
+/* line 312, ../../sass/screen.scss */
+.align-left {
+  float: left;
+}
+
+/* SIDEBAR */
+/* line 317, ../../sass/screen.scss */
+.sidebar {
+  margin-left: 50px;
+  padding: 60px 0em 1em 0em;
+}
+@media (max-width: 979px) {
+  /* line 317, ../../sass/screen.scss */
+  .sidebar {
+    margin-left: 0px;
+    padding: 0px;
+  }
+}
+/* line 324, ../../sass/screen.scss */
+.sidebar h3 {
+  border-bottom: 1px solid #d9d9d9;
+  color: #000000;
+  margin: 0 0;
+  /* FB request */
+  padding: 0 0;
+  /* FB request */
+  padding-bottom: 12px;
+}
+/* line 331, ../../sass/screen.scss */
+.sidebar p {
+  color: #595959;
+  font: normal 400 13px/20px Chivo, sans-serif;
+  /* Global Font-sizing */
+  padding: 0 0;
+  /* FB request */
+  margin: 20px 0px;
+}
+
+/* Teaser Content Styles */
+/* line 341, ../../sass/screen.scss */
+p.teaser_image {
+  text-align: center;
+}
+
+/* SECONDARY SECTIONS */
+/* Styles for Teaser Boxes */
+/* RESPONSIVE TEASER LAYOUTS */
+/* line 354, ../../sass/screen.scss */
+section.secondary {
+  /* BASE STYLING TABLE TEASER LAYOUTS */
+}
+/* line 355, ../../sass/screen.scss */
+section.secondary .teaser-table td {
+  border-top-width: 0px;
+  border-right-width: 0px;
+}
+/* line 359, ../../sass/screen.scss */
+section.secondary .teaser-table td .single-teaser,
+section.secondary .teaser-table td .teaser_wrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #cccccc;
+  margin-right: 1em;
+  padding-bottom: 3px;
+  padding-top: 1em;
+}
+/* line 366, ../../sass/screen.scss */
+section.secondary .teaser-table td .single-teaser:hover,
+section.secondary .teaser-table td .teaser_wrapper:hover {
+  border-top-style: solid;
+  border-top-width: 3px;
+  padding-bottom: 1px;
+}
+/* line 373, ../../sass/screen.scss */
+section.secondary .teaser-table td two-cols:last-child .teaser_wrapper {
+  margin-right: 0em;
+  margin-left: 1em;
+}
+/* line 380, ../../sass/screen.scss */
+section.secondary .teaser-list .span4 {
+  width: 50%;
+  /* General styles for text */
+}
+/* line 383, ../../sass/screen.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper {
+  padding-top: 1em;
+}
+/* line 385, ../../sass/screen.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper .teaser_text {
+  color: #595959;
+  font: normal 400 16px/24px Chivo, sans-serif;
+}
+/* line 389, ../../sass/screen.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title {
+  font: normal 900 16px/20px Chivo, sans-serif;
+  /* Global Font-sizing */
+  margin-bottom: 0;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a, section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a:hover, section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a:link:hover {
+  border: none;
+}
+/* line 393, ../../sass/screen.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a, section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a:link, section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a:active, section.secondary .teaser-list .span4 .teaser_wrapper .teaser_title a:hover {
+  font-weight: inherit;
+}
+/* line 397, ../../sass/screen.scss */
+section.secondary .teaser-list .span4 .teaser_wrapper .read_more {
+  margin: 1em 0em;
+}
+/* line 403, ../../sass/screen.scss */
+section.secondary .teaser-list .span4:nth-child(odd) .teaser_wrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #cccccc;
+  margin-right: 1em;
+}
+/* line 408, ../../sass/screen.scss */
+section.secondary .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover {
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+/* line 415, ../../sass/screen.scss */
+section.secondary .teaser-list .span4:nth-child(even) .teaser_wrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #cccccc;
+  margin-left: 1em;
+}
+/* line 420, ../../sass/screen.scss */
+section.secondary .teaser-list .span4:nth-child(even) .teaser_wrapper:hover {
+  border-top-style: solid;
+  border-top-width: 4px;
+}
+/* line 429, ../../sass/screen.scss */
+section.secondary .four-cols .span2 {
+  margin-bottom: 0.625em;
+  margin-top: 0.625em;
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  /* line 429, ../../sass/screen.scss */
+  section.secondary .four-cols .span2 {
+    width: 25%;
+  }
+}
+/* line 435, ../../sass/screen.scss */
+section.secondary .four-cols .span2 .teaser_wrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #cccccc;
+  margin-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 3px;
+}
+/* line 442, ../../sass/screen.scss */
+section.secondary .four-cols .span2 .teaser_wrapper:hover {
+  border-top-style: solid;
+  border-top-width: 4px;
+  padding-bottom: 0;
+}
+/* line 448, ../../sass/screen.scss */
+section.secondary .four-cols .span2 strong {
+  font-size: 1.143em;
+}
+/* line 451, ../../sass/screen.scss */
+section.secondary .four-cols .span2 p, section.secondary .four-cols .span2 a {
+  line-height: 1.5em;
+  padding-right: 0em;
+}
+/* line 456, ../../sass/screen.scss */
+section.secondary .four-cols .span4 {
+  margin-right: 1em;
+}
+/* line 459, ../../sass/screen.scss */
+section.secondary .four-cols .span2 {
+  line-height: 0.857em;
+  margin-bottom: 0.75em;
+  margin-top: 0.75em;
+}
+/* line 463, ../../sass/screen.scss */
+section.secondary .four-cols .span2 .teaser {
+  font-size: 0.925em;
+  margin-right: 1.429em;
+  /*Ensures roughly 170px width;*/
+}
+/* line 467, ../../sass/screen.scss */
+section.secondary .four-cols .span2 .teaser .teaser_image a img {
+  max-width: 100%;
+}
+/* line 475, ../../sass/screen.scss */
+section.secondary .four-cols .span2 .teaser .teaser_text {
+  line-height: 1.5em;
+}
+/* line 483, ../../sass/screen.scss */
+section.secondary table.four-cols td {
+  width: 25%;
+}
+/* line 485, ../../sass/screen.scss */
+section.secondary table.four-cols td .empty-teaser {
+  width: 25%;
+}
+/* line 488, ../../sass/screen.scss */
+section.secondary table.four-cols td .teaser_image {
+  float: left;
+  max-width: 100%;
+  margin: 0 0;
+}
+/* line 492, ../../sass/screen.scss */
+section.secondary table.four-cols td .teaser_image img {
+  width: 100%;
+}
+/* line 496, ../../sass/screen.scss */
+section.secondary table.four-cols td .teaser_text {
+  font-size: 0.925em;
+}
+/* line 499, ../../sass/screen.scss */
+section.secondary table.four-cols td .teaser_title {
+  font-size: 1.125em;
+  font-weight: bold;
+  margin: 1em 0em;
+}
+/* line 503, ../../sass/screen.scss */
+section.secondary table.four-cols td .teaser_title a, section.secondary table.four-cols td .teaser_title a:link, section.secondary table.four-cols td .teaser_title a:active, section.secondary table.four-cols td .teaser_title a:hover {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 512, ../../sass/screen.scss */
+section.secondary table.two-cols td {
+  width: 50%;
+}
+/* line 514, ../../sass/screen.scss */
+section.secondary table.two-cols td .empty-teaser {
+  width: 50%;
+}
+/* line 517, ../../sass/screen.scss */
+section.secondary table.two-cols td .teaser_title {
+  color: #000;
+  font: normal 900 16px/20px Chivo, sans-serif;
+  /* Global Font-sizing */
+  margin: 1em 0em 0em 0em;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.secondary table.two-cols td .teaser_title a, section.secondary table.two-cols td .teaser_title a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.secondary table.two-cols td .teaser_title a:hover, section.secondary table.two-cols td .teaser_title a:link:hover {
+  border: none;
+}
+/* line 522, ../../sass/screen.scss */
+section.secondary table.two-cols td .teaser_title a, section.secondary table.two-cols td .teaser_title a:link, section.secondary table.two-cols td .teaser_title a:active, section.secondary table.two-cols td .teaser_title a:hover {
+  font-weight: inherit;
+  color: #000000;
+  text-decoration: none;
+}
+/* line 528, ../../sass/screen.scss */
+section.secondary table.two-cols td .teaser_text {
+  margin-bottom: 1em;
+  color: #595959;
+  font: normal 400 16px/24px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+/* line 533, ../../sass/screen.scss */
+section.secondary table.two-cols td .read_more {
+  margin: 1em 0em;
+}
+/* line 538, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser {
+  margin-top: 2em;
+}
+/* line 541, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser tr:nth-child(1) td {
+  border-top-width: 0px;
+  padding-bottom: 0.5em;
+}
+/* line 546, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td {
+  width: 50%;
+}
+/* line 549, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td .single-teaser .teaser_title {
+  font: normal 900 16px/20px Chivo, sans-serif;
+  /* Global Font-sizing */
+  margin: 1em 0em;
+}
+/* line 552, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td .single-teaser .teaser_title a, section.secondary table.two-col-single-teaser td .single-teaser .teaser_title a:link {
+  font-weight: 900;
+}
+/* line 556, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td .single-teaser .teaser_text {
+  margin: 1em 0em;
+}
+/* line 559, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td .single-teaser .read_more {
+  margin: 1em 0em;
+}
+/* line 563, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td h2 {
+  margin: 0 0;
+  padding-top: 0em;
+}
+/* line 567, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td:nth-child(1) {
+  /*         border-right: 1px solid #000000; */
+}
+/* line 572, ../../sass/screen.scss */
+section.secondary .nav-pills {
+  display: inline;
+}
+/* line 574, ../../sass/screen.scss */
+section.secondary .nav-pills:after {
+  clear: inherit;
+  /* Ensures nav pills on conferences and events appear on one line */
+}
+/* line 577, ../../sass/screen.scss */
+section.secondary .nav-pills li {
+  /*font-weight: bold;*/
+  list-style-type: none;
+  margin-right: 0.125em;
+  margin: 0em;
+}
+/* line 582, ../../sass/screen.scss */
+section.secondary .nav-pills li a, section.secondary .nav-pills li a.active {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  background-color: #333333;
+  border-style: solid;
+  border-width: 2px;
+  font-size: 13px;
+  padding: 4px;
+}
+/* line 589, ../../sass/screen.scss */
+section.secondary .nav-pills li a:hover, section.secondary .nav-pills li a.active:hover {
+  color: #333333;
+}
+
+/* Color Overrides for Sections */
+/* line 602, ../../sass/screen.scss */
+section.programs-admissions h2, section.programs-admissions h3,
+section.about h2,
+section.about h3 {
+  color: #eec500;
+  clear: left;
+}
+/* line 606, ../../sass/screen.scss */
+section.programs-admissions blockquote, section.programs-admissions blockquote.pull-right,
+section.about blockquote,
+section.about blockquote.pull-right {
+  border-color: #eec500;
+}
+/* line 608, ../../sass/screen.scss */
+section.programs-admissions blockquote strong, section.programs-admissions blockquote.pull-right strong,
+section.about blockquote strong,
+section.about blockquote.pull-right strong {
+  color: #eec500;
+}
+/* line 612, ../../sass/screen.scss */
+section.programs-admissions .span4, section.programs-admissions .span2,
+section.about .span4,
+section.about .span2 {
+  border-color: #eec500;
+}
+/* line 614, ../../sass/screen.scss */
+section.programs-admissions .span4 p a, section.programs-admissions .span2 p a,
+section.about .span4 p a,
+section.about .span2 p a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* line 617, ../../sass/screen.scss */
+section.programs-admissions .span4 p a:hover, section.programs-admissions .span2 p a:hover,
+section.about .span4 p a:hover,
+section.about .span2 p a:hover {
+  color: #FFFFFF;
+}
+/* line 621, ../../sass/screen.scss */
+section.programs-admissions .span4 strong, section.programs-admissions .span4 strong a, section.programs-admissions .span2 strong, section.programs-admissions .span2 strong a,
+section.about .span4 strong,
+section.about .span4 strong a,
+section.about .span2 strong,
+section.about .span2 strong a {
+  color: #eec500;
+}
+/* line 625, ../../sass/screen.scss */
+section.programs-admissions .degree-subnav,
+section.about .degree-subnav {
+  border-bottom: 1px solid #000000;
+  padding-bottom: 28px;
+}
+/* line 628, ../../sass/screen.scss */
+section.programs-admissions .degree-subnav ul.nav-pills,
+section.about .degree-subnav ul.nav-pills {
+  margin-bottom: 10px;
+}
+/* line 630, ../../sass/screen.scss */
+section.programs-admissions .degree-subnav ul.nav-pills li a,
+section.about .degree-subnav ul.nav-pills li a {
+  background-color: transparent;
+  border: none;
+  color: #595959;
+  padding: 6px 8px;
+}
+/* line 635, ../../sass/screen.scss */
+section.programs-admissions .degree-subnav ul.nav-pills li a:hover,
+section.about .degree-subnav ul.nav-pills li a:hover {
+  background-color: #eec500;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in;
+  -moz-transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  background-color: #000000;
+  color: #eec500;
+}
+/* line 642, ../../sass/screen.scss */
+section.programs-admissions .degree-subnav ul.nav-pills > .active > a,
+section.programs-admissions .degree-subnav ul.nav-pills > .active > a:hover,
+section.about .degree-subnav ul.nav-pills > .active > a,
+section.about .degree-subnav ul.nav-pills > .active > a:hover {
+  background-color: #000000;
+  border-color: #eec500;
+  color: #eec500;
+}
+
+/* line 653, ../../sass/screen.scss */
+section.engagement-opportunities h2, section.engagement-opportunities h3,
+section.research-projects h2,
+section.research-projects h3 {
+  color: #00a8cb;
+}
+/* line 656, ../../sass/screen.scss */
+section.engagement-opportunities blockquote, section.engagement-opportunities blockquote.pull-right,
+section.research-projects blockquote,
+section.research-projects blockquote.pull-right {
+  border-color: #00a8cb;
+}
+/* line 659, ../../sass/screen.scss */
+section.engagement-opportunities blockquote span.plugin_link a, section.engagement-opportunities blockquote span.plugin_link a:link, section.engagement-opportunities blockquote span.plugin_link a:hover, section.engagement-opportunities blockquote.pull-right span.plugin_link a, section.engagement-opportunities blockquote.pull-right span.plugin_link a:link, section.engagement-opportunities blockquote.pull-right span.plugin_link a:hover,
+section.research-projects blockquote span.plugin_link a,
+section.research-projects blockquote span.plugin_link a:link,
+section.research-projects blockquote span.plugin_link a:hover,
+section.research-projects blockquote.pull-right span.plugin_link a,
+section.research-projects blockquote.pull-right span.plugin_link a:link,
+section.research-projects blockquote.pull-right span.plugin_link a:hover {
+  color: #000000;
+}
+/* line 663, ../../sass/screen.scss */
+section.engagement-opportunities blockquote strong, section.engagement-opportunities blockquote.pull-right strong,
+section.research-projects blockquote strong,
+section.research-projects blockquote.pull-right strong {
+  color: #00a8cb;
+}
+/* line 667, ../../sass/screen.scss */
+section.engagement-opportunities .span4, section.engagement-opportunities .span2,
+section.research-projects .span4,
+section.research-projects .span2 {
+  border-color: #00a8cb;
+}
+/* line 669, ../../sass/screen.scss */
+section.engagement-opportunities .span4 p a, section.engagement-opportunities .span2 p a,
+section.research-projects .span4 p a,
+section.research-projects .span2 p a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+/* line 672, ../../sass/screen.scss */
+section.engagement-opportunities .span4 p a:hover, section.engagement-opportunities .span2 p a:hover,
+section.research-projects .span4 p a:hover,
+section.research-projects .span2 p a:hover {
+  color: #FFFFFF;
+}
+/* line 676, ../../sass/screen.scss */
+section.engagement-opportunities .span4 strong, section.engagement-opportunities .span4 strong a, section.engagement-opportunities .span2 strong, section.engagement-opportunities .span2 strong a,
+section.research-projects .span4 strong,
+section.research-projects .span4 strong a,
+section.research-projects .span2 strong,
+section.research-projects .span2 strong a {
+  color: #00a8cb;
+}
+/* line 679, ../../sass/screen.scss */
+section.engagement-opportunities .span4 .span4, section.engagement-opportunities .span2 .span4,
+section.research-projects .span4 .span4,
+section.research-projects .span2 .span4 {
+  min-height: 22em;
+  /* Ensures most spans will align evenly */
+}
+/* line 683, ../../sass/screen.scss */
+section.engagement-opportunities .nav-pills,
+section.research-projects .nav-pills {
+  border-bottom: 1px solid #000000;
+}
+/* line 685, ../../sass/screen.scss */
+section.engagement-opportunities .nav-pills li a,
+section.research-projects .nav-pills li a {
+  border: 2px solid #4eba13;
+  color: #4eba13;
+}
+/* line 688, ../../sass/screen.scss */
+section.engagement-opportunities .nav-pills li a:hover,
+section.research-projects .nav-pills li a:hover {
+  background-color: #00a8cb;
+  border-color: #00a8cb;
+}
+/* line 694, ../../sass/screen.scss */
+section.engagement-opportunities .nav-pills > .active > a,
+section.engagement-opportunities .nav-pills > .active > a:hover,
+section.research-projects .nav-pills > .active > a,
+section.research-projects .nav-pills > .active > a:hover {
+  background-color: #00a8cb;
+  border-color: #00a8cb;
+  color: #333333;
+}
+
+/* line 704, ../../sass/screen.scss */
+section.community section.secondary,
+section.conferences-and-events section.secondary {
+  margin-top: 2em;
+}
+/* line 707, ../../sass/screen.scss */
+section.community h2, section.community h3,
+section.conferences-and-events h2,
+section.conferences-and-events h3 {
+  color: #4eba13;
+}
+/* line 710, ../../sass/screen.scss */
+section.community blockquote, section.community blockquote.pull-right,
+section.conferences-and-events blockquote,
+section.conferences-and-events blockquote.pull-right {
+  border-color: #4eba13;
+}
+/* line 712, ../../sass/screen.scss */
+section.community blockquote strong, section.community blockquote.pull-right strong,
+section.conferences-and-events blockquote strong,
+section.conferences-and-events blockquote.pull-right strong {
+  color: #4eba13;
+}
+/* line 716, ../../sass/screen.scss */
+section.community .span4,
+section.conferences-and-events .span4 {
+  border-color: #4eba13;
+}
+@media (max-width: 979px) and (min-width: 768px) {
+  /* line 716, ../../sass/screen.scss */
+  section.community .span4,
+  section.conferences-and-events .span4 {
+    width: 50%;
+  }
+}
+/* line 721, ../../sass/screen.scss */
+section.community .span4 strong, section.community .span4 strong a,
+section.conferences-and-events .span4 strong,
+section.conferences-and-events .span4 strong a {
+  color: #4eba13;
+}
+/* line 726, ../../sass/screen.scss */
+section.community .span2 .teaser_title a,
+section.conferences-and-events .span2 .teaser_title a {
+  color: #4eba13;
+}
+/* line 730, ../../sass/screen.scss */
+section.community .teaser .span2,
+section.conferences-and-events .teaser .span2 {
+  /*    border: 1px solid $brightgreen;*/
+}
+/* line 732, ../../sass/screen.scss */
+section.community .teaser .span2 p a, section.community .teaser .span2 p a:link,
+section.conferences-and-events .teaser .span2 p a,
+section.conferences-and-events .teaser .span2 p a:link {
+  /*      color: #FFFFFF;*/
+  text-decoration: none;
+}
+/* line 738, ../../sass/screen.scss */
+section.community .row:nth-last-child(1),
+section.conferences-and-events .row:nth-last-child(1) {
+  border-bottom: 1px solid #cccccc;
+}
+/* line 743, ../../sass/screen.scss */
+section.community .event-tabs,
+section.conferences-and-events .event-tabs {
+  border-bottom: 1px solid black;
+  margin-bottom: 36px;
+  /*     padding-bottom: 10px; */
+}
+/* line 748, ../../sass/screen.scss */
+section.community .event-tabs .nav-pills b,
+section.conferences-and-events .event-tabs .nav-pills b {
+  color: #000000;
+  font-size: 13px;
+}
+/* line 752, ../../sass/screen.scss */
+section.community .event-tabs .nav-pills li a,
+section.conferences-and-events .event-tabs .nav-pills li a {
+  /*       border: 1px solid $brightgreen; */
+  background-color: transparent;
+  color: #595959;
+  border: none;
+  margin-right: 5px;
+  padding: 5px;
+}
+/* line 759, ../../sass/screen.scss */
+section.community .event-tabs .nav-pills li a:hover,
+section.conferences-and-events .event-tabs .nav-pills li a:hover {
+  border-color: #4eba13;
+  color: #333333;
+  background-color: #eec500;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in;
+  -moz-transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  background-color: #4eba13;
+}
+/* line 767, ../../sass/screen.scss */
+section.community .event-tabs .nav-pills > .active > a,
+section.community .event-tabs .nav-pills > .active > a:hover,
+section.conferences-and-events .event-tabs .nav-pills > .active > a,
+section.conferences-and-events .event-tabs .nav-pills > .active > a:hover {
+  background-color: #eec500;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.5s ease-in;
+  -moz-transition: background-color 0.5s ease-in;
+  -webkit-transition: background-color 0.5s ease-in;
+  -o-transition: background-color 0.5s ease-in;
+  background-color: #4eba13;
+}
+/* line 772, ../../sass/screen.scss */
+section.community .event-tabs .right,
+section.conferences-and-events .event-tabs .right {
+  float: right;
+}
+/* line 774, ../../sass/screen.scss */
+section.community .event-tabs .right li a,
+section.conferences-and-events .event-tabs .right li a {
+  margin-left: 5px;
+}
+/* line 776, ../../sass/screen.scss */
+section.community .event-tabs .right li a:hover,
+section.conferences-and-events .event-tabs .right li a:hover {
+  background-color: transparent;
+  color: #000000;
+}
+/* line 782, ../../sass/screen.scss */
+section.community .event-tabs .right > .active > a,
+section.community .event-tabs .right > .active > a:hover,
+section.conferences-and-events .event-tabs .right > .active > a,
+section.conferences-and-events .event-tabs .right > .active > a:hover {
+  background-color: transparent;
+  color: #000000;
+  transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  /* Firefox 4 */
+  -webkit-transition: background-color .5s;
+  /* Safari and Chrome */
+  -o-transition: background-color .5s;
+  /* Opera */
+}
+/* line 793, ../../sass/screen.scss */
+section.community .event-summary.span4 .teaser_wrapper,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #CCC;
+  margin-right: 1em;
+  padding-bottom: 3px;
+}
+/* line 799, ../../sass/screen.scss */
+section.community .event-summary.span4 .teaser_wrapper:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper:hover {
+  border-top-style: solid;
+  border-top-width: 3px;
+  padding-bottom: 1px;
+  border-color: #4eba13;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.community .event-summary.span4 .teaser_wrapper a, section.community .event-summary.span4 .teaser_wrapper a:link,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.community .event-summary.span4 .teaser_wrapper a:hover, section.community .event-summary.span4 .teaser_wrapper a:link:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link:hover {
+  border: none;
+}
+/* line 806, ../../sass/screen.scss */
+section.community .event-summary.span4 .teaser_wrapper a, section.community .event-summary.span4 .teaser_wrapper a:link,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link {
+  border-bottom: 1px solid #eec500;
+}
+/* line 808, ../../sass/screen.scss */
+section.community .event-summary.span4 .teaser_wrapper a h2, section.community .event-summary.span4 .teaser_wrapper a:link h2,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a h2,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link h2 {
+  color: #000000;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.community .event-summary.span4 .teaser_wrapper a h2 a, section.community .event-summary.span4 .teaser_wrapper a h2 a:link, section.community .event-summary.span4 .teaser_wrapper a:link h2 a, section.community .event-summary.span4 .teaser_wrapper a:link h2 a:link,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a h2 a,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a h2 a:link,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link h2 a,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link h2 a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.community .event-summary.span4 .teaser_wrapper a h2 a:hover, section.community .event-summary.span4 .teaser_wrapper a h2 a:link:hover, section.community .event-summary.span4 .teaser_wrapper a:link h2 a:hover, section.community .event-summary.span4 .teaser_wrapper a:link h2 a:link:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a h2 a:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a h2 a:link:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link h2 a:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link h2 a:link:hover {
+  border: none;
+}
+/* line 812, ../../sass/screen.scss */
+section.community .event-summary.span4 .teaser_wrapper a:hover, section.community .event-summary.span4 .teaser_wrapper a:link:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:hover,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper a:link:hover {
+  border-bottom: none;
+}
+/* line 816, ../../sass/screen.scss */
+section.community .event-summary.span4 .teaser_wrapper .location,
+section.conferences-and-events .event-summary.span4 .teaser_wrapper .location {
+  color: #4eba13;
+  font: normal 400 13px/20px Chivo, sans-serif;
+}
+
+/** Spacing for secondary section of Conferences and Events */
+/* line 827, ../../sass/screen.scss */
+body.conferences-and-events section.secondary {
+  margin-top: 2em;
+}
+
+/* ****************************************************************************** */
+/* Directory Styling */
+/* line 838, ../../sass/screen.scss */
+section.community form #directory_search {
+  margin: 4em 0em 2em 0em;
+  border-bottom: 1px solid #000000;
+}
+/* line 841, ../../sass/screen.scss */
+section.community form #directory_search input#query {
+  border: none;
+  font-family: Chivo, sans-serif;
+  font-size: 3em;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  padding: 4px 0px;
+  margin: 0 0;
+  width: auto;
+  height: 48px;
+}
+/* line 851, ../../sass/screen.scss */
+section.community form #directory_search input#query:hover, section.community form #directory_search input#query:focus {
+  border: none;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+}
+/* line 855, ../../sass/screen.scss */
+section.community form #directory_search input#query::-webkit-input-placeholder, section.community form #directory_search input#query::-moz-placeholder, section.community form #directory_search input#query::-ms-input-placeholder {
+  margin: 4px 0px 0px 0px;
+  font-weight: normal;
+  color: #d7d7d7;
+  height: 52px;
+  padding: 14px 0px 0px 0px;
+}
+/* line 862, ../../sass/screen.scss */
+section.community form #directory_search input#query input:-moz-placeholder {
+  color: #999;
+}
+/* line 865, ../../sass/screen.scss */
+section.community form #directory_search input#query input:-ms-input-placeholder {
+  color: #999;
+}
+/* line 869, ../../sass/screen.scss */
+section.community form #directory_search input[type="submit"] {
+  float: right;
+  background: url("/static/img/directory_search.png") no-repeat;
+  border: none;
+  margin-top: 10px;
+  width: 46px;
+  height: 46px;
+}
+/* line 878, ../../sass/screen.scss */
+section.community form #degree_filters {
+  float: left;
+  margin-right: 1.5em;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+/* line 882, ../../sass/screen.scss */
+section.community form #degree_filters select#degree_select {
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  /*         -webkit-appearance: none; */
+}
+/* line 891, ../../sass/screen.scss */
+section.community .step-links a, section.community .step-links a:link, section.community .step-links a:hover {
+  color: #000000;
+  border-bottom: 1px solid #eec500;
+}
+/* line 896, ../../sass/screen.scss */
+section.community .directory-wrap {
+  border-top: 1px solid #cccccc;
+  padding: 1em 0 2em 0;
+  margin-right: 1.5em;
+  min-height: 20em;
+}
+/* line 901, ../../sass/screen.scss */
+section.community .directory-wrap:nth-child(4n+4) {
+  margin-right: 0em;
+}
+/* line 904, ../../sass/screen.scss */
+section.community .directory-wrap .name {
+  color: #666666;
+  font-size: 0.9149em;
+  font-weight: bold;
+  line-height: 1.1em;
+  margin: 1em 0em 0em 0em;
+}
+/* line 911, ../../sass/screen.scss */
+section.community .directory-wrap .tracks {
+  font-size: 1em;
+  line-height: 1.25em;
+  margin-bottom: 1em;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.community .directory-wrap .resume-links a, section.community .directory-wrap .resume-links a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.community .directory-wrap .resume-links a:hover, section.community .directory-wrap .resume-links a:link:hover {
+  border: none;
+}
+/* line 918, ../../sass/screen.scss */
+section.community .directory-wrap .resume-links a, section.community .directory-wrap .resume-links a:link {
+  font-size: 13px;
+  line-height: 20px;
+  color: #595959;
+}
+
+/* Overriding various other sections not contained above */
+/* line 931, ../../sass/screen.scss */
+body.features h2, body.features h3,
+body.contact-us h2,
+body.contact-us h3 {
+  color: #eec500;
+}
+
+/* line 937, ../../sass/screen.scss */
+body.conferences-and-events-events .shadow {
+  display: none;
+}
+
+/* Style overrides for Main section */
+/* line 945, ../../sass/screen.scss */
+section.main h2, section.main h3 {
+  color: #000000;
+}
+/* line 949, ../../sass/screen.scss */
+section.main blockquote strong {
+  color: #000000;
+}
+
+/* blockquotes */
+/* line 957, ../../sass/screen.scss */
+section blockquote {
+  background-color: #FFFFFF;
+  border-style: solid none;
+  border-width: 2px;
+  color: #000000;
+  position: relative;
+  top: 1em;
+  float: left;
+  width: 22.5em;
+  padding: 0.5em 01em 0.5em 1em;
+  margin: 0em 2.2em 2em -3.8em;
+  font-size: 1.143em;
+  line-height: 1.25em;
+}
+/* line 970, ../../sass/screen.scss */
+section blockquote p {
+  color: #000000;
+  font-size: 1em;
+  padding: 0 0;
+}
+
+/* line 977, ../../sass/screen.scss */
+section.secondary blockquote {
+  margin: 0em 2.2em 2em -2em;
+  /* keep in same positioningg as blockquote in main section */
+}
+
+/* line 982, ../../sass/screen.scss */
+section blockquote.pull-right,
+section blockquote.pull-right {
+  float: right;
+  width: 16em;
+  border-width: 1px 0px;
+  margin: 0em 0em 2em 1em;
+  padding: 1em 0;
+}
+/* line 988, ../../sass/screen.scss */
+section blockquote.pull-right p,
+section blockquote.pull-right p {
+  text-align: left;
+}
+
+/* WYSIWYG-specific Table Styling */
+/* line 996, ../../sass/screen.scss */
+section.secondary {
+  /****************************************************************************** */
+  /*Old design with Flush borders */
+  /*table */
+  /* ****************************************************************************** */
+  /* Future Styling to match Teaser layouts */
+}
+/* line 997, ../../sass/screen.scss */
+section.secondary ul {
+  margin-left: 1em;
+}
+/* line 1002, ../../sass/screen.scss */
+section.secondary table {
+  border: 0px solid transparent;
+  /*td*/
+}
+/* line 1004, ../../sass/screen.scss */
+section.secondary table td {
+  border-right: 1em solid #f7f7f7;
+  vertical-align: top;
+}
+/* line 1007, ../../sass/screen.scss */
+section.secondary table td:first-child {
+  vertical-align: top;
+}
+/* line 1009, ../../sass/screen.scss */
+section.secondary table td:first-child ul {
+  margin-left: 1em;
+}
+/* line 1013, ../../sass/screen.scss */
+section.secondary table td:nth-last-child(1) {
+  vertical-align: top;
+  border-right: none;
+}
+/* line 1017, ../../sass/screen.scss */
+section.secondary table td h4 {
+  color: #000000;
+}
+/* line 1020, ../../sass/screen.scss */
+section.secondary table td .single-teaser {
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #cccccc;
+  margin-right: 1em;
+  padding-bottom: 3px;
+}
+/* line 1026, ../../sass/screen.scss */
+section.secondary table td .single-teaser:hover {
+  border-top-style: solid;
+  border-top-width: 3px;
+  padding-bottom: 1px;
+}
+/* line 1032, ../../sass/screen.scss */
+section.secondary table td .single-teaser .teaser_title a, section.secondary table td .single-teaser .teaser_title a:link, section.secondary table td .single-teaser .teaser_title a:hover {
+  font: normal 900 13px/16px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+/* line 1042, ../../sass/screen.scss */
+section.secondary table.two-col-single-teaser td .teaser_title a, section.secondary table.two-col-single-teaser td .teaser_title a:link, section.secondary table.two-col-single-teaser td .teaser_title a:hover {
+  font: normal 900 16px/20px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+/* line 1051, ../../sass/screen.scss */
+section.secondary table.no-borders td, section.secondary table.no-borders td:first-child, section.secondary table.no-borders td:nth-last-child(1) {
+  padding: 0em 0em;
+  border-width: 0px;
+}
+
+/* Custom styling for spacing on specific WYSIWYG tables in Community sections */
+/* line 1063, ../../sass/screen.scss */
+section.community-board-of-overseers li,
+section.community-faculty li {
+  margin-bottom: 1em;
+}
+/* line 1065, ../../sass/screen.scss */
+section.community-board-of-overseers li strong,
+section.community-faculty li strong {
+  font-weight: normal;
+  display: block;
+}
+
+/* line 1073, ../../sass/screen.scss */
+section.secondary {
+  margin-top: 54px;
+}
+/* line 1075, ../../sass/screen.scss */
+section.secondary h2 {
+  /*     font-size: 1.857em; */
+}
+/* line 1077, ../../sass/screen.scss */
+section.secondary h2:nth-child(1) {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+/* line 1082, ../../sass/screen.scss */
+section.secondary p {
+  padding-right: 2em;
+}
+
+/* COLOR OVERRIDES FOR TEASERS */
+/* line 1098, ../../sass/screen.scss */
+section.programs-admissions table.teaser-table td .teaser_wrapper:hover,
+section.programs-admissions .single-teaser:hover,
+section.programs-admissions .span2 .teaser_wrapper:hover,
+section.programs-admissions .span4 .teaser_wrapper:hover,
+section.programs-admissions .teaser-list .span2:nth-child(odd) .teaser_wrapper:hover,
+section.programs-admissions .teaser-list .span2:nth-child(even) .teaser_wrapper:hover,
+section.programs-admissions .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover,
+section.programs-admissions .teaser-list .span4:nth-child(even) .teaser_wrapper:hover,
+section.about table.teaser-table td .teaser_wrapper:hover,
+section.about .single-teaser:hover,
+section.about .span2 .teaser_wrapper:hover,
+section.about .span4 .teaser_wrapper:hover,
+section.about .teaser-list .span2:nth-child(odd) .teaser_wrapper:hover,
+section.about .teaser-list .span2:nth-child(even) .teaser_wrapper:hover,
+section.about .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover,
+section.about .teaser-list .span4:nth-child(even) .teaser_wrapper:hover {
+  border-top-color: #eec500;
+}
+
+/* line 1112, ../../sass/screen.scss */
+section.engagement-opportunities table.teaser-table td .teaser_wrapper:hover,
+section.engagement-opportunities .single-teaser:hover,
+section.engagement-opportunities .span2 .teaser_wrapper:hover,
+section.engagement-opportunities .span4 .teaser_wrapper:hover,
+section.engagement-opportunities .teaser-list .span2:nth-child(odd) .teaser_wrapper:hover,
+section.engagement-opportunities .teaser-list .span2:nth-child(even) .teaser_wrapper:hover,
+section.engagement-opportunities .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover,
+section.engagement-opportunities .teaser-list .span4:nth-child(even) .teaser_wrapper:hover,
+section.research-projects table.teaser-table td .teaser_wrapper:hover,
+section.research-projects .single-teaser:hover,
+section.research-projects .span2 .teaser_wrapper:hover,
+section.research-projects .span4 .teaser_wrapper:hover,
+section.research-projects .teaser-list .span2:nth-child(odd) .teaser_wrapper:hover,
+section.research-projects .teaser-list .span2:nth-child(even) .teaser_wrapper:hover,
+section.research-projects .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover,
+section.research-projects .teaser-list .span4:nth-child(even) .teaser_wrapper:hover {
+  border-top-color: #00a8cb;
+}
+
+/* line 1126, ../../sass/screen.scss */
+section.conference-events table.teaser-table td .teaser_wrapper:hover,
+section.conference-events .single-teaser:hover,
+section.conference-events .span2 .teaser_wrapper:hover,
+section.conference-events .span4 .teaser_wrapper:hover,
+section.conference-events .teaser-list .span2:nth-child(odd) .teaser_wrapper:hover,
+section.conference-events .teaser-list .span2:nth-child(even) .teaser_wrapper:hover,
+section.conference-events .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover,
+section.conference-events .teaser-list .span4:nth-child(even) .teaser_wrapper:hover,
+section.community table.teaser-table td .teaser_wrapper:hover,
+section.community .single-teaser:hover,
+section.community .span2 .teaser_wrapper:hover,
+section.community .span4 .teaser_wrapper:hover,
+section.community .teaser-list .span2:nth-child(odd) .teaser_wrapper:hover,
+section.community .teaser-list .span2:nth-child(even) .teaser_wrapper:hover,
+section.community .teaser-list .span4:nth-child(odd) .teaser_wrapper:hover,
+section.community .teaser-list .span4:nth-child(even) .teaser_wrapper:hover {
+  border-top-color: #4eba13;
+}
+
+/* line 1134, ../../sass/screen.scss */
+section.research-projects h2 {
+  color: #00a8cb;
+}
+
+/* line 1140, ../../sass/screen.scss */
+section.sidebar p {
+  color: #a6a6a6;
+}
+/* line 1143, ../../sass/screen.scss */
+section.sidebar h3 {
+  color: #000000;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.sidebar h3 a, section.sidebar h3 a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+section.sidebar h3 a:hover, section.sidebar h3 a:link:hover {
+  border: none;
+}
+/* line 1146, ../../sass/screen.scss */
+section.sidebar h3 a.plugin_link, section.sidebar h3 a:link.plugin_link {
+  font-weight: 900;
+}
+/* line 1151, ../../sass/screen.scss */
+section.sidebar h4 {
+  margin-left: 0.75em;
+}
+/* line 1154, ../../sass/screen.scss */
+section.sidebar .teaser {
+  margin: 1em 4em 1em 1em;
+  background-color: #d7d7d7;
+  padding: 1em;
+}
+/* line 1159, ../../sass/screen.scss */
+section.sidebar .teaser_image {
+  border: 1px solid #eec500;
+  width: 100%;
+}
+
+/* line 1167, ../../sass/screen.scss */
+.teaser_title {
+  margin: 1em 0em;
+}
+/* line 55, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+.teaser_title a, .teaser_title a:link {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid #eec500;
+}
+/* line 60, /Users/mlineen/code/iit/code/iit_id_cms/sass/colors.scss */
+.teaser_title a:hover, .teaser_title a:link:hover {
+  border: none;
+}
+/* line 1170, ../../sass/screen.scss */
+.teaser_title a, .teaser_title a:link, .teaser_title a:hover {
+  font-weight: 900;
+}
+
+/* line 1176, ../../sass/screen.scss */
+.teaser_image {
+  width: 100%;
+}
+
+/* line 1180, ../../sass/screen.scss */
+.teaser_text {
+  color: #595959;
+  font: normal 400 13px/16px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+
+/* line 1186, ../../sass/screen.scss */
+.read_more a, .read_more a:link, .read_more a:active {
+  border-bottom: 1px solid #eec500;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+/* line 1191, ../../sass/screen.scss */
+.read_more a:hover, .read_more a:link:hover, .read_more a:active:hover {
+  border-bottom: 0px solid #eec500;
+}
+
+/* ****************************************************************************** */
+/* Contact Us */
+/* don't show form labels */
+/* line 1202, ../../sass/screen.scss */
+.contact-form label {
+  display: none;
+}
+/* line 1205, ../../sass/screen.scss */
+.contact-form p input, .contact-form p textarea {
+  padding-left: 0em;
+}
+
+/* line 1212, ../../sass/screen.scss */
+section.secondary form.contact-form {
+  overflow: hidden;
+}
+/* line 1214, ../../sass/screen.scss */
+section.secondary form.contact-form ul {
+  margin-left: 0;
+}
+/* line 1218, ../../sass/screen.scss */
+section.secondary form.contact-form p.messages,
+section.secondary form.contact-form ul.errorlist li {
+  color: red;
+  font-size: 14px;
+  list-style-type: none;
+}
+/* line 1223, ../../sass/screen.scss */
+section.secondary form.contact-form p.messages {
+  margin-top: 1em;
+}
+/* line 1226, ../../sass/screen.scss */
+section.secondary form.contact-form input[type="text"], section.secondary form.contact-form select, section.secondary form.contact-form textarea {
+  background-color: transparent;
+  border-color: #f7f7f7;
+  border-radius: 0px;
+  border-style: none;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom: 1px solid #BFBFBF;
+  border-left-width: 0px;
+  box-shadow: none;
+  color: #a6a6a6;
+  font-family: 'Chivo', sans-serif;
+  width: 100%;
+}
+/* line 1239, ../../sass/screen.scss */
+section.secondary form.contact-form input[type="text"]:focus, section.secondary form.contact-form select:focus, section.secondary form.contact-form textarea:focus {
+  color: #000;
+}
+/* line 1243, ../../sass/screen.scss */
+section.secondary form.contact-form select {
+  /*       background-color: $midgray; */
+  background: #d7d7d7 url("/static/img/icon-sort.png") no-repeat center right;
+  color: #666666;
+  width: 50%;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0px 10px;
+}
+/* line 1254, ../../sass/screen.scss */
+section.secondary form.contact-form input[type="submit"] {
+  background-color: #eec500;
+  border: none;
+  color: #000000;
+  font-family: 'Chivo', sans-serif;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  padding: 0.25em 0.75em;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
+}
+/* line 1263, ../../sass/screen.scss */
+section.secondary form.contact-form input[type="submit"]:hover {
+  color: #eec500;
+  background-color: #000000;
+}
+
+/* Admin interface Styling */
+/* line 1275, ../../sass/screen.scss */
+#cms_placeholder-overlay ul.cms_placeholder-options li,
+#cms_placeholder-overlay ul.cms_placeholder-options li a {
+  list-style-type: none;
+}
+
+/* ****************************************************************************** */
+/* CALENDAR STYLING */
+/* line 1283, ../../sass/screen.scss */
+#datething {
+  margin-left: -2px;
+}
+/* line 1285, ../../sass/screen.scss */
+#datething .ui-datepicker-header {
+  border-bottom: 1px solid #cccccc;
+  padding: 0em 0em 0.5em 0em;
+  /*     margin-left: 1em; */
+  margin-right: 4em;
+}
+/* line 1290, ../../sass/screen.scss */
+#datething .ui-datepicker-header a.ui-datepicker-prev, #datething .ui-datepicker-header a.ui-datepicker-next {
+  color: #000000;
+  font-size: 1.286em;
+  margin: 0em 0.5em;
+}
+/* line 1295, ../../sass/screen.scss */
+#datething .ui-datepicker-header .ui-datepicker-title {
+  color: #000000;
+  float: left;
+  /*       font-size: 1.286em; */
+  margin-right: 2em;
+  /* Pushing Next, Prev, textbuttons to right - responsive- won't go to edge*/
+}
+/* line 1302, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar {
+  /*     margin-left: 1.25em; */
+  width: 80%;
+}
+/* line 1305, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar thead {
+  margin-bottom: 0.5em;
+}
+/* line 1307, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar thead th {
+  color: #000000;
+  font-weight: normal;
+  text-align: left;
+}
+/* line 1313, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar tbody {
+  padding: 5px;
+  vertical-align: top;
+  width: 100%;
+}
+/* line 1317, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar tbody td {
+  color: #a6a6a6;
+  font-size: 1.143em;
+  height: 2.5em;
+  padding: 3px 0px 0px 5px;
+  /*      width: 0.75em;*/
+}
+/* line 1324, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar tbody td.event-day {
+  background-color: #333333;
+  border: 2px solid #4eba13;
+  padding: 3px 0px 0px 3px;
+  color: #FFFFFF;
+}
+/* line 1329, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar tbody td.event-day a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+/* line 1334, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar tbody td.ui-datepicker-current-day {
+  color: #4eba13;
+}
+/* line 1336, ../../sass/screen.scss */
+#datething table.ui-datepicker-calendar tbody td.ui-datepicker-current-day a {
+  color: #FFFFFF;
+}
+
+/* ****************************************************************************** */
+/* FLICKR PLUGIN STYLING */
+/* line 1349, ../../sass/screen.scss */
+.flickr_photobar .thumbs {
+  background-color: transparent;
+  border-top: none;
+}
+/* line 1353, ../../sass/screen.scss */
+.flickr_photobar .thumbs a.prev, .flickr_photobar .thumbs a.next {
+  width: 30px;
+  height: 78px;
+  position: absolute;
+  top: 8px;
+  margin: 0px;
+  z-index: 10;
+  border: none;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+}
+/* line 1362, ../../sass/screen.scss */
+.flickr_photobar .thumbs a.prev:hover, .flickr_photobar .thumbs a.next:hover {
+  background-color: #eec500;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+  background-color: black;
+}
+/* line 1367, ../../sass/screen.scss */
+.flickr_photobar .thumbs a.prev {
+  left: 0px;
+  background: #eec500 url("/static/img/flickr_left.png") no-repeat center center;
+  border: none;
+}
+/* line 1372, ../../sass/screen.scss */
+.flickr_photobar .thumbs a.next {
+  right: 0px;
+  background: #eec500 url("/static/img/flickr_right.png") no-repeat center center;
+}
+/* line 1376, ../../sass/screen.scss */
+.flickr_photobar .albums ul li a img {
+  border: none;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+  /*
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+    -moz-transition: border linear .2s, box-shadow linear .2s;
+    -o-transition: border linear .2s, box-shadow linear .2s;
+  */
+}

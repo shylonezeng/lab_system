@@ -1,0 +1,765 @@
+/* ****************************************************************************** */
+/* Styles for Footer positioning */
+/* line 7, ../../sass/homepage.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 11, ../../sass/homepage.scss */
+.watermark {
+  background-image: none;
+}
+
+/* line 15, ../../sass/homepage.scss */
+#main {
+  overflow: auto;
+}
+
+/* line 19, ../../sass/homepage.scss */
+.footer {
+  display: none;
+  z-index: 1;
+}
+
+/* Full Screen Slider Style */
+/* line 26, ../../sass/homepage.scss */
+#iit-icon-vertical {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+/* line 33, ../../sass/homepage.scss */
+#content_slider .content-container {
+  display: block;
+  height: 450px;
+}
+
+/* line 38, ../../sass/homepage.scss */
+.content-wrap {
+  height: 400px;
+}
+
+/* line 42, ../../sass/homepage.scss */
+.bx-wrapper {
+  float: left;
+}
+
+/* line 46, ../../sass/homepage.scss */
+.btn_slider {
+  background: #fedd32;
+  padding: 5px 10px;
+}
+
+/* line 51, ../../sass/homepage.scss */
+a.btn_slider {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Styles for Hover Navigation Controls */
+/* line 58, ../../sass/homepage.scss */
+.learn_more {
+  position: absolute;
+  top: 330px;
+}
+/* line 61, ../../sass/homepage.scss */
+.learn_more a {
+  background: #FEDD32;
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+/* line 66, ../../sass/homepage.scss */
+.learn_more a:hover {
+  background: #000000;
+  color: #FEDD32;
+}
+
+/* line 73, ../../sass/homepage.scss */
+.slide_controls {
+  position: absolute;
+  left: 120px;
+  /* Positions buttons */
+  top: 362px;
+}
+/* line 77, ../../sass/homepage.scss */
+.slide_controls a {
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+  zoom: 1;
+  background-color: #d7d7d7;
+  font-size: 2em;
+  vertical-align: bottom;
+  padding: 0px 10px;
+  margin-left: -3px;
+  /* Needed to keep buttons flush */
+  height: 30px;
+  text-align: center;
+  color: #000000;
+  vertical-align: middle;
+}
+/* line 88, ../../sass/homepage.scss */
+.slide_controls a:hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+
+/* line 94, ../../sass/homepage.scss */
+.prev, .next {
+  display: inline;
+}
+
+/* line 98, ../../sass/homepage.scss */
+.prev:hover, .next:hover {
+  background-color: #eec500;
+  color: #000000;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in;
+  -moz-transition: background-color 0.2s ease-in;
+  -webkit-transition: background-color 0.2s ease-in;
+  -o-transition: background-color 0.2s ease-in;
+}
+
+/* line 102, ../../sass/homepage.scss */
+.clear {
+  clear: both;
+}
+
+/* Style to fix top gap on slider */
+/* line 108, ../../sass/homepage.scss */
+.home-top {
+  position: relative;
+  top: -1px;
+}
+
+/* Full Screen Slider Content Styles */
+/* line 114, ../../sass/homepage.scss */
+#orange_content {
+  background: url(../img/img-orange.png) top left no-repeat;
+  display: block;
+  position: relative;
+  left: 90px;
+  height: 426px;
+  width: 560px;
+}
+/* line 121, ../../sass/homepage.scss */
+#orange_content h1 {
+  color: #FFFFFF;
+  letter-spacing: 0.025em;
+  line-height: 36px;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  text-align: left;
+}
+/* line 129, ../../sass/homepage.scss */
+#orange_content p {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* line 136, ../../sass/homepage.scss */
+#orange_content p,
+#blue_content p {
+  color: #FFF;
+}
+
+/* line 140, ../../sass/homepage.scss */
+#blue_content {
+  background: url(../img/img-blue.png) top left no-repeat;
+  display: block;
+  height: 450px;
+  width: 488px;
+  position: relative;
+  left: 170px;
+}
+/* line 147, ../../sass/homepage.scss */
+#blue_content h1 {
+  color: #FFFFFF;
+  letter-spacing: 0.025em;
+  line-height: 36px;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  text-align: left;
+}
+/* line 155, ../../sass/homepage.scss */
+#blue_content p {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* line 161, ../../sass/homepage.scss */
+#green_content {
+  background: url(../img/img-green.png) center top no-repeat;
+  display: block;
+  position: relative;
+  left: 170px;
+  height: 376px;
+  width: 589px;
+}
+/* line 168, ../../sass/homepage.scss */
+#green_content h1 {
+  color: #FFFFFF;
+  letter-spacing: 0.025em;
+  line-height: 36px;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  text-align: left;
+}
+/* line 176, ../../sass/homepage.scss */
+#green_content p {
+  color: #FFFFFF;
+  text-align: left;
+}
+
+/* line 182, ../../sass/homepage.scss */
+#gold_content {
+  background: url(../img/img-gold.png) center top no-repeat;
+  display: block;
+  position: relative;
+  left: 225px;
+  height: 354px;
+  width: 490px;
+}
+/* line 189, ../../sass/homepage.scss */
+#gold_content h1 {
+  color: #000000;
+  letter-spacing: 0.025em;
+  line-height: 36px;
+  padding-bottom: 0.5em;
+  padding-top: 0.25em;
+  text-align: left;
+}
+/* line 197, ../../sass/homepage.scss */
+#gold_content p {
+  color: #000000;
+  text-align: left;
+}
+
+/* line 203, ../../sass/homepage.scss */
+#orange_content, #blue_content {
+  color: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* line 209, ../../sass/homepage.scss */
+#orange_content a, #blue_content a {
+  font-weight: 700;
+}
+
+/* line 213, ../../sass/homepage.scss */
+.inner {
+  font-size: 16px;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+  width: 350px;
+}
+
+/* line 221, ../../sass/homepage.scss */
+#guided_tours {
+  background: url(../img/id_v2.png) no-repeat 0 0;
+  position: absolute;
+  display: block;
+  height: 43px;
+  width: 148px;
+  right: 0;
+  top: 25em;
+  z-index: 200;
+}
+/* line 230, ../../sass/homepage.scss */
+#guided_tours:hover {
+  background-position: 0 -45px;
+}
+
+/* Styles for You + ID Popover content */
+/*Overwriting bootstrap modal transitions eliminating top slide in transition */
+/* line 239, ../../sass/homepage.scss */
+.modal {
+  background-color: transparent;
+  border-width: 0px;
+  width: auto;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+/* line 246, ../../sass/homepage.scss */
+.modal.fade {
+  -webkit-transition: opacity .3s linear, ease-out;
+  -moz-transition: none;
+  -ms-transition: opacity .3s linear, ease-out;
+  -o-transition: opacity .3s linear, ease-out;
+  transition: opacity .3s linear, ease-out;
+}
+
+/* line 254, ../../sass/homepage.scss */
+.modal.fade.in {
+  /*Positioning of modal relative to browser viewport */
+  top: 45%;
+}
+@media (min-width: 980px) and (max-width: 1200px) {
+  /* line 254, ../../sass/homepage.scss */
+  .modal.fade.in {
+    top: 45%;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 254, ../../sass/homepage.scss */
+  .modal.fade.in {
+    top: 55%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 254, ../../sass/homepage.scss */
+  .modal.fade.in {
+    top: 2%;
+  }
+}
+
+/* line 266, ../../sass/homepage.scss */
+#closeModal a {
+  background-color: #000000;
+  background: url("../img/modal_close.png") no-repeat 0 0;
+  float: right;
+  position: relative;
+  margin-right: 0px;
+  width: 26px;
+  height: 26px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  zoom: 1;
+}
+@media (max-width: 480px) {
+  /* line 276, ../../sass/homepage.scss */
+  #closeModal a #closemodal a {
+    width: 0px;
+    /* Fixing problem with close box at small screen size */
+  }
+}
+/* line 280, ../../sass/homepage.scss */
+#closeModal a:hover {
+  background-position: -26px 0px;
+}
+
+/* line 288, ../../sass/homepage.scss */
+.modal-header {
+  border: none;
+  padding: 0 0;
+}
+@media (max-width: 480px) {
+  /* line 291, ../../sass/homepage.scss */
+  .modal-header .close {
+    margin-top: 0px;
+    padding: 6px 0px 5px 0px;
+  }
+}
+
+/* line 299, ../../sass/homepage.scss */
+.modal-body {
+  background-color: #eec500;
+  max-height: 100%;
+  overflow-y: hidden;
+  padding: 0 0;
+  float: left;
+  /** Overrides to contain modal and allow scrolling within it to accomodate small res devices **/
+  /* Portrait tablet to landscape and desktop */
+  /* Landscape phone to portrait tablet */
+}
+@media (min-width: 980px) and (max-width: 1200px) {
+  /* line 299, ../../sass/homepage.scss */
+  .modal-body {
+    max-height: 530px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 299, ../../sass/homepage.scss */
+  .modal-body {
+    max-height: 420px;
+    overflow-y: scroll;
+  }
+}
+@media (max-width: 767px) {
+  /* line 299, ../../sass/homepage.scss */
+  .modal-body {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+}
+/* line 323, ../../sass/homepage.scss */
+.modal-body .home-modal {
+  border: 1px solid #FFFFFF;
+  min-height: 17em;
+  padding: 1em;
+  font-size: 13px;
+  line-height: 20px;
+}
+@media (min-width: 980px) and (max-width: 1200px) {
+  /* line 323, ../../sass/homepage.scss */
+  .modal-body .home-modal {
+    min-height: 265px;
+    padding: 0.5em;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 323, ../../sass/homepage.scss */
+  .modal-body .home-modal {
+    min-height: 288px;
+    padding: 0.25em;
+  }
+}
+@media (max-width: 767px) {
+  /* line 323, ../../sass/homepage.scss */
+  .modal-body .home-modal {
+    min-height: 125px;
+    padding: 0.25em;
+  }
+}
+/* line 341, ../../sass/homepage.scss */
+.modal-body .home-modal h4 {
+  font-size: 1.143em;
+  color: #000000;
+}
+/* line 345, ../../sass/homepage.scss */
+.modal-body .home-modal p {
+  color: #000000;
+  font-size: 13px;
+  line-height: 20px;
+}
+/* line 350, ../../sass/homepage.scss */
+.modal-body .home-modal a {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* line 357, ../../sass/homepage.scss */
+.popover {
+  width: 60%;
+}
+
+/* line 361, ../../sass/homepage.scss */
+.popover.right {
+  border: none;
+  border-radius: 0px;
+  margin-left: -40px;
+  z-index: 1000;
+  padding: 1em 2em;
+}
+
+/* line 371, ../../sass/homepage.scss */
+h3.popover-title,
+.popover .arrow,
+.popover .arrow:after {
+  display: none;
+}
+
+/* line 375, ../../sass/homepage.scss */
+.popover td {
+  padding: 0.5em;
+  vertical-align: top;
+  width: 25%;
+}
+
+/* line 381, ../../sass/homepage.scss */
+.popover hr {
+  background-color: #FFFFFF;
+  height: 0.286em;
+}
+
+/* line 386, ../../sass/homepage.scss */
+.popover-content h4 {
+  color: #000000;
+}
+
+/* line 390, ../../sass/homepage.scss */
+.popover-content p {
+  color: #000000;
+  font-size: 1em;
+}
+
+/* line 395, ../../sass/homepage.scss */
+.popover-content a {
+  color: #000000;
+  font-size: 0.875em;
+  font-weight: bold;
+}
+
+/* line 401, ../../sass/homepage.scss */
+.popover a:hover {
+  text-decoration: none;
+}
+
+/* line 406, ../../sass/homepage.scss */
+.popover-content {
+  background-color: #ffdd00;
+  height: 560px;
+  margin-left: -30px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  padding-right: 30px;
+  padding-top: 20px;
+  position: absolute;
+  top: -60px;
+  width: 700px;
+}
+
+/* Collapsing Index Callout Styling */
+/* line 421, ../../sass/homepage.scss */
+.info-col {
+  float: left;
+  margin-right: 30px;
+  width: 290px;
+}
+
+/* line 427, ../../sass/homepage.scss */
+#index_callouts {
+  position: absolute;
+}
+/* line 430, ../../sass/homepage.scss */
+#index_callouts h3 {
+  letter-spacing: 0.06em;
+  margin: 12px 0;
+}
+/* line 435, ../../sass/homepage.scss */
+#index_callouts .feature {
+  margin-bottom: 12px;
+}
+/* line 439, ../../sass/homepage.scss */
+#index_callouts .text {
+  margin-top: 12px;
+}
+/* line 442, ../../sass/homepage.scss */
+#index_callouts .text .closeFeature {
+  height: 26px;
+  width: 26px;
+  background: black;
+  background: url("../img/modal_close.png") no-repeat 0 0;
+  position: absolute;
+  top: -26px;
+  right: 0px;
+  cursor: pointer;
+}
+/* line 451, ../../sass/homepage.scss */
+#index_callouts .text .closeFeature:hover {
+  background-position: -26px 0px;
+}
+/* line 457, ../../sass/homepage.scss */
+#index_callouts .photo img {
+  max-width: 180px;
+  height: auto;
+  margin-top: 12px;
+}
+/* line 463, ../../sass/homepage.scss */
+#index_callouts #currently h3 a {
+  color: #4eba13;
+}
+/* line 465, ../../sass/homepage.scss */
+#index_callouts #currently h3 a:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* line 471, ../../sass/homepage.scss */
+#index_callouts #in_the_field h3 a {
+  color: #00a8cb;
+}
+/* line 473, ../../sass/homepage.scss */
+#index_callouts #in_the_field h3 a:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* line 479, ../../sass/homepage.scss */
+#index_callouts #id_in_action h3 a {
+  color: #eec500;
+}
+/* line 481, ../../sass/homepage.scss */
+#index_callouts #id_in_action h3 a:hover {
+  color: #000;
+  text-decoration: none;
+}
+/* line 487, ../../sass/homepage.scss */
+#index_callouts .header {
+  width: 160px;
+  cursor: pointer;
+  padding: 12px 10px;
+}
+/* line 492, ../../sass/homepage.scss */
+#index_callouts .header h4 {
+  color: #FFF;
+  margin: 0;
+}
+/* line 497, ../../sass/homepage.scss */
+#index_callouts .header .big-date {
+  color: #FFFFFF;
+  font: normal 400 30px/30px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+/* line 505, ../../sass/homepage.scss */
+#index_callouts .feature.opened .header h4,
+#index_callouts .feature .header:hover h4 {
+  color: black;
+}
+/* line 508, ../../sass/homepage.scss */
+#index_callouts .feature.opened .header .big-date,
+#index_callouts .feature .header:hover .big-date {
+  color: black;
+}
+/* line 513, ../../sass/homepage.scss */
+#index_callouts #currently .header {
+  background-color: #4eba13;
+}
+/* line 518, ../../sass/homepage.scss */
+#index_callouts #in_the_field .header {
+  background-color: #00a8cb;
+}
+/* line 523, ../../sass/homepage.scss */
+#index_callouts #id_in_action .header {
+  background-color: #eec500;
+}
+/* line 529, ../../sass/homepage.scss */
+#index_callouts .content .text {
+  -webkit-box-shadow: #333333 0px 3px 5px;
+  -moz-box-shadow: #333333 0px 3px 5px;
+  box-shadow: #333333 0px 3px 5px;
+  background-color: #FFFFFF;
+  opacity: 0.75;
+}
+/* line 533, ../../sass/homepage.scss */
+#index_callouts .content .text .inner-text {
+  padding: 1em;
+  color: #dddddd;
+  font: normal 400 16px/24px Chivo, sans-serif;
+  /* Global Font-sizing */
+}
+/* line 537, ../../sass/homepage.scss */
+#index_callouts .content .text .inner-text p {
+  color: #dddddd;
+}
+/* line 539, ../../sass/homepage.scss */
+#index_callouts .content .text .inner-text p a, #index_callouts .content .text .inner-text p strong {
+  color: #dddddd;
+}
+/* line 549, ../../sass/homepage.scss */
+#index_callouts .opened .text .inner-text {
+  color: #595959;
+}
+/* line 551, ../../sass/homepage.scss */
+#index_callouts .opened .text .inner-text p {
+  color: #595959;
+}
+/* line 553, ../../sass/homepage.scss */
+#index_callouts .opened .text .inner-text p a {
+  color: #0088cc;
+}
+/* line 556, ../../sass/homepage.scss */
+#index_callouts .opened .text .inner-text p strong {
+  color: #595959;
+}
+
+@media (min-width: 768px) {
+  /* line 568, ../../sass/homepage.scss */
+  #index_callouts .feature {
+    height: auto;
+    position: relative;
+  }
+  /* line 573, ../../sass/homepage.scss */
+  #index_callouts .header {
+    position: relative;
+    z-index: 1000;
+  }
+  /* line 578, ../../sass/homepage.scss */
+  #index_callouts .photo, #index_callouts .text {
+    position: absolute;
+    top: 0;
+    opacity: .5;
+  }
+  /* line 584, ../../sass/homepage.scss */
+  #index_callouts .text {
+    width: 285px;
+  }
+}
+@media (max-width: 767px) {
+  /* line 592, ../../sass/homepage.scss */
+  #index_callouts {
+    position: relative;
+  }
+  /* line 595, ../../sass/homepage.scss */
+  #index_callouts .header, #index_callouts .photo, #index_callouts .text {
+    position: relative;
+    width: 97%;
+  }
+  /* line 602, ../../sass/homepage.scss */
+  #index_callouts .content .text .inner-text,
+  #index_callouts .content .text .inner-text p,
+  #index_callouts .content .text .inner-text p strong {
+    color: #595959;
+  }
+  /* line 606, ../../sass/homepage.scss */
+  #index_callouts .content .text .inner-text p a {
+    color: #0088cc;
+  }
+
+  /* line 611, ../../sass/homepage.scss */
+  #menugrow {
+    display: none;
+  }
+
+  /* line 615, ../../sass/homepage.scss */
+  #guided_tours {
+    top: 4.5em;
+  }
+
+  /* line 619, ../../sass/homepage.scss */
+  #phone-msg {
+    background-image: url("/static/img/iit_website_slide_responsive01b.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /* line 624, ../../sass/homepage.scss */
+  #phone-msg p {
+    color: #FFFFFF;
+    padding: 0.5em 1em 1em;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 634, ../../sass/homepage.scss */
+  .navbar-fixed-top {
+    margin-bottom: 0px;
+  }
+
+  /* line 638, ../../sass/homepage.scss */
+  #index_callouts .header {
+    width: 142px;
+  }
+  /* line 641, ../../sass/homepage.scss */
+  #index_callouts .text {
+    width: 200px;
+  }
+  /* line 644, ../../sass/homepage.scss */
+  #index_callouts .photo img {
+    max-width: 120px;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 653, ../../sass/homepage.scss */
+  #nav-block-wrapper #nav-block {
+    margin-left: 118px;
+    /* Maintains squarish menu on homepage */
+  }
+
+  /* line 658, ../../sass/homepage.scss */
+  #index_callouts .header {
+    width: 248px;
+  }
+  /* line 661, ../../sass/homepage.scss */
+  #index_callouts .text {
+    width: 304px;
+  }
+}
+/* line 667, ../../sass/homepage.scss */
+#spacer {
+  margin-top: 50px;
+}

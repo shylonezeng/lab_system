@@ -1,0 +1,12 @@
+.book_manage
+{
+	font-family: elephant;
+	font-size: 30px;
+	color:#FFFFFF;
+	
+}
+.book_manage:hover
+{
+	color: #FF0000;
+	text-decoration: none;
+}

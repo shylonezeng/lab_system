@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+{% extends 'core_static/bases/list_base.html' %}
+
+{% block title %}book list{% endblock %}
+
+{% block content %} 
+    {% if usage == 'borrowed_booklist' %}
+    <h1>您已借阅以下图书</h1>
+    {% elif usage == 'other_borrowed_booklist' %}
+    <h1>您可以预约以下图书</h1>
+    {% elif usage == 'not_borrowed_booklist'%}
+    <h1>您可以借阅以下图书</h1>
+    {% else %}
+        {% block other_info %} {% endblock %}
+    {% endif %}
+    
+    {% if usage != 'borrowed_booklist' %}
+        <div id='message'>
+            <h2>{% if message %}{{message}}{% endif %}</h2>
+        </div>
+      　　        　<ol>
+        {% if books %} {% for book in books %}
+        <li>
+        <div >
+            <div >{{ book.name }}</div>
+            <div style="align:right; float:right"><strong>
+                        {% if usage == 'other_borrowed_booklist' %}
+                            <a href='/core/order/?book_name={{book.name}}'>order  </a>
+                        {% else %}
+                            <a href='/core/borrow/?book_name={{book.name}}'>borrow</a>
+                        {% endif %}
+                        </strong>
+            </div>
+        </div>
+        <div style="font-size:2px;font:arial">作者:{{book.author}}|出版社：{{book.publisher}}|出版时间：{{book.pub_time}} |状态：{{book.status}}</div>
+        </li>
+        {% endfor %} {% else %}
+        </ol>
+        <p>no books</p>
+        {% endif %}
+    
+         <div class="pagination">
+            <span class="step-links">
+                {% if books.has_previous %}
+                    <a href="?page={{ books.previous_page_number }}">previous</a>
+                {% endif %}
+        
+                <span class="current">
+                                                【 Page {{ books.number }}/{{ books.paginator.num_pages }}】
+                </span>
+        
+                {% if books.has_next %}
+                    <a href="?page={{ books.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+    <!--borrow trasaction-->
+    {% else %}
+        {% if borrow_items %} {% for item in borrow_items %}
+        {% with item.book as book %}
+        <li>
+        <div >
+            <div >{{ book.name }}</div>
+            <div style="align:right; float:right"><strong>
+               <a href='/core/return/?borrowitem_id={{item.id}}'>return </a>
+                        </strong>
+            </div>
+        </div>
+        <div style="font-size:2px;font:arial">作者:{{book.author}}|出版社：{{book.publisher}}|出版时间：{{book.pub_time}} |状态：{{book.status}}</div>
+        </li>
+        {% endwith %}
+        {% endfor %} {% else %}
+        </ol>
+        <p>no borrow_items</p>
+        {% endif %}
+        
+            <div class="pagination">
+                <span class="step-links">
+                    {% if borrow_items.has_previous %}
+                        <a href="?page={{ borrow_items.previous_page_number }}">previous</a>
+                    {% endif %}
+            
+                    <span class="current">
+                                                    【 Page {{ borrow_items.number }}/{{ borrow_items.paginator.num_pages }}】
+                    </span>
+            
+                    {% if borrow_items.has_next %}
+                        <a href="?page={{ borrow_items.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        
+    {% endif %}
+                
+
+    
+{% endblock%}

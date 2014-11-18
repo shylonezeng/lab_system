@@ -3,11 +3,11 @@ import os
 SETTINGS_DIR = os.path.dirname(__file__)
 PROJECT_PATH = os.path.join(SETTINGS_DIR, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
-TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'templates')
+TEMPLATE_PATH = os.path.join(PROJECT_PATH, 'core/templates')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-min_datetime='1997-01-01 00:00' # min datetime
+min_datetime='1997-01-01 00:00:00' # min datetime
 ADMINS = (
     ('admin', 'shylonezeng@gmail.com'),
 )

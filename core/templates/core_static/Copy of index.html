@@ -1,0 +1,195 @@
+{% extends 'core_static/base_index.html' %}
+
+{% block events %}
+<div class="column span3" id="currently">
+    <h3><a href="#">通知</a></h3>
+    {% if events %} {% for event in events %}
+ 
+        <div class="feature">
+            <div class="header">
+                <span class="big-date">
+                      {% if event.etime %}{{ event.etime | date:"Nd H:i" }}{% else %} No time Set {% endif %}      
+                </span>
+                <h4>{{event.title}}</h4>
+            </div>
+            <div class="content">
+
+                <div class="text">
+                    <div class="closeFeature" style="display: noe;"></div>
+                    <div class="inner-text">
+
+                        <p>
+                            <img src=""/>
+                        </p>
+                        <p> {{ event.detail }}</p>
+                  <!--      <div class="read_more" style="display: none;">
+
+                            <a href="https://www.id.iit.edu/conferences-and-events/whole-view-madrid/">Read More&nbsp;»</a>
+
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        
+
+    </div>
+    {% endfor %} {% else %}
+    <div class="feature">
+        <div class="header">
+            <h1>There are no events currently</h1>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+
+<!--block news -->
+{% block news %}
+<div class="column span3" id="currently">
+    <h3><a href="#">新闻</a></h3> 
+    {% if newss %} {% for news in newss %}
+   
+
+        <div class="feature">
+            <div class="header">
+                
+                <h4>{{news.title}}</h4>
+            </div>
+            <div class="content">
+
+                <div class="text">
+                    <div class="closeFeature" style="display: none;"></div>
+                    <div class="inner-text">
+
+                        <p>
+                             <img src=""/>
+                        </p>
+                        <p> {{ news.detail| truncatewords:"30" }}
+                        <div class="read_more" style="display: none;">
+
+                            <a href="/core/news/?news_id={{ news.id }}">详情&nbsp;»</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+    </div>
+    {% endfor %} {% else %}
+    <div class="feature">
+        <div class="header">
+            <h1>There are no news currently</h1>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+<!--
+{% block book_manage %}
+        <div id=manage_block>
+            <ul>
+                <li><a href="/core/borrow/">借书</a></li>
+                <li><a href="/core/return/">还书</a></li>
+                <li><a href="/core/order/">预约</a></li>
+                <li><a href="/core/recommend/">推荐购买</a></li>
+            </ul>
+        </div>
+{% endblock%}
+-->
+{% block not_returned_books %}
+    <div class=left_float　style="width:50%" >
+        {% if not_returned%}
+        {% for item in not_returned %}
+        <div>
+            <p> <a href='/core/return/?book_name={{item.id}}'>{{item.book}}</a>
+            <a href='/core/return/?book_name={{item.book}}'>[return]</a>
+            </p>
+        </div>
+        {% endfor %}
+           {% else %}
+          <div>empty books not returned</div>
+          {% endif%}
+    </div>
+{% endblock %}
+
+
+{% block personal_info %}
+<div class="column span3" id="id_in_action" >
+    <h3><a href="#">个人信息</a></h3> 
+        <div class="feature">
+            <div class="header">
+              {% if current_user %} {{ current_user }}<br/>
+              <a href="/core/logout">[logout]</a> 
+               {% else %}
+                <a href="/core/login/">login</a> {% endif %}
+            </div>
+              <div class="content">
+
+                                    <div class="text">
+                                        <div class="closeFeature" style="display: none;"></div>
+                                        <div class="inner-text">
+                                            <div>
+                                                    <div>借阅历史</div>
+        
+                                                        {% if returned %}
+                                                        <ol>
+                                                             {% for item in returned %}
+                                                        <div>
+                                                            <li>{{item.book}}</li>
+                                                       <!--     <a href='/core/book_detail/?book_name={{item.book}}'>【{{ item.return_time }}】detail</a>-->
+                                                        </div>
+                                                              {% endfor %}        
+                                                        </ol>
+                                                        {% else %}
+                                                            <div>no borrow history</div>  
+                                                        {% endif%}
+
+                                            </div>
+                                            <div class="read_more" style="display: none;">
+                                            
+                                                <a href="/core/borrow_history">
+                                                     更多 »
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+    </div> 
+</div>  
+{% endblock %}   
+
+
+{% block right_bar%}
+    <div class=left_float　style="width:50%" >
+        <div>NOT RETURNED</div>
+        {% if not_returned%}
+        {% for item in not_returned %}v
+        <div>
+            <p>{{item.book}}</p>
+            <a href='/core/return/?book_name={{item.book}}'>｜return</a>
+        </div>
+        {% endfor %}
+           {% else %}
+          <div>empty books not returned</div>
+          {% endif%}
+    </div>
+    <div >
+        <div>RETURNED</div>
+        
+        {% if returned %}
+        <ol>
+             {% for item in returned %}
+        <div>
+            <li>{{item.book}}</li>
+            <a href='/core/book_detail/?book_name={{item.book}}'>【{{ item.return_time }}】detail</a>
+        </div>
+              {% endfor %}        
+        </ol>
+        {% else %}
+            <div>no borrow history</div>  
+        {% endif%}
+    </div>
+{% endblock %}

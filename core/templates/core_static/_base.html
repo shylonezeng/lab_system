@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Rango</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>   
+    </head>
+
+    <body>
+        <div>
+            <h1>lab_system</h1>
+        </div>
+        <div id=mainbody_container>
+            <!-- id=mainbody_container-->
+            {% block events %}
+            <p>block events</p>
+            {% endblock %}
+             
+            {% block news %}
+             <p>block news</p>
+            {% endblock %}
+        
+            <!--book manage block -->
+            {% block book_manage %}
+             <p>block book_manage</p>
+            {% endblock %}
+        
+            <div id=right_bar class=right_slide>
+                {% block right_bar%}
+                    right bar
+                {% endblock %}
+            </div>
+        </div>
+        <div id=footer>
+             {% block footer_block %}
+             <p>block footer_block</p>
+             {% endblock %}
+        </div>
+    </body>
+
+
+</html>

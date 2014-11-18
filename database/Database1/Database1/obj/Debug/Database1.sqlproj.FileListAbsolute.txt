@@ -1,0 +1,9 @@
+H:\sfiles\lab_system\database\Database1\Database1\bin\Debug\Database1.dacpac
+H:\sfiles\lab_system\database\Database1\Database1\bin\Debug\Database1.dll
+H:\sfiles\lab_system\database\Database1\Database1\bin\Debug\Database1.pdb
+H:\sfiles\lab_system\database\Database1\Database1\obj\Debug\Model.xml
+H:\sfiles\lab_system\database\Database1\Database1\obj\Debug\refactor.xml
+H:\sfiles\lab_system\database\Database1\Database1\obj\Debug\postdeploy.sql
+H:\sfiles\lab_system\database\Database1\Database1\obj\Debug\predeploy.sql
+H:\sfiles\lab_system\database\Database1\Database1\obj\Debug\Database1.dll
+H:\sfiles\lab_system\database\Database1\Database1\obj\Debug\Database1.pdb

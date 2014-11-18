@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)file:///C:/Users/Administrator/Desktop/Professor%20Vijay%20Kumar%20to%20deliver%20keynote%20at%20User%20Friendly%202014.html -->
+{% load static %}
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <link href="{% static 'css/global.css'%}" type="text/css" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.css'%}" type="text/css" rel="stylesheet">
+        <link media="screen, projection" href="{% static 'css/screen.css'%}" type="text/css" rel="stylesheet">
+        <link media="print" href="{% static 'css/print.css'%}" type="text/css" rel="stylesheet">
+        <!--[if IE]>
+              <link href="/static/css/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+         <![endif]-->
+        <link href="./list_base_files/css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/1.css'%}" type="text/css" media="screen">
+
+        <title>
+            {% block title %} {% endblock %}
+        </title>
+        
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta content="width=device-width, maximum-scale=1.0" name="viewport">
+
+
+
+        <script type="text/javascript" async="" src="{% static 'js/ga.js'%}"></script>
+        <script type="text/javascript" async="" src="js/ga(1).js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-474560-1']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+
+        <style>
+            #haloword-pron {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -34px;
+            }
+            #haloword-pron:hover {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -34px;
+            }
+            #haloword-open {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -17px;
+            }
+            #haloword-open:hover {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -17px;
+            }
+            #haloword-close {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px 0;
+            }
+            #haloword-close:hover {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px 0;
+            }
+            #haloword-add {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -51px;
+            }
+            #haloword-add:hover {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -51px;
+            }
+            #haloword-remove {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -94px -68px;
+            }
+            #haloword-remove:hover {
+                background: url(chrome-extension://bhkcehpnnlgncpnefpanachijmhikocj/img/icon.svg) -111px -68px;
+            }
+        </style>
+    </head>
+
+    <body class="news news-news-2014">
+         
+        <div id="wrap">
+            
+            <form id="csrf_token" style="display:none">
+                <div style="display:none">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="IgOMzahZtAui512UfB9DtUJSq9DRnZXS">
+                </div>
+            </form>
+
+
+
+            <div id="body-container" class="container" >
+
+                <div class="row" >
+
+                    <div class="span8 right-borders" >
+                        <div id="spacer" class="span8"></div>
+                        
+                        <div class="row" >
+                            <div class="span8 shadow" style="background:#EEEEEE; ">
+                                {% block content %} <strong> content block</strong> {% endblock%}
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'core_static/bases/right_menu_bar.html' %}>
+                
+                </div>
+
+                <div id="push"></div>
+            </div>
+        </div>
+        
+        <footer>
+            {% include "core_static/bases/footer_content.html"%}
+        </footer>
+
+        <script src="{% static 'js/selectivizr-min.js'%}"></script>
+        <script src="{% static 'js/jquery.min.js'%}"></script>
+        <script src="{% static 'js/jquery-ui.min.js'%}"></script>
+        <script src="{% static 'js/bootstrap.js'%}"></script>
+        <script src="{% static 'js/contact-form.js'%}"></script>
+        <script src="{% static 'js/menu.js'%}"></script>
+        <script src="{% static 'js/placeholder-shim.js'%}"></script>
+        <script src="{% static 'js/vimeo.js'%}"></script>
+
+
+        <!-- for rails-like remote forms -->
+        <script src="{% static 'js/django-ujs.js'%}"></script>
+
+
+
+
+        <div id="haloword-lookup" class="ui-widget-content ui-draggable">
+            <div id="haloword-title"><span id="haloword-word"></span>
+                <a herf="#" id="haloword-pron" class="haloword-button" title="发音"></a>
+                <audio id="haloword-audio"></audio>
+                <div id="haloword-control-container">
+                    <a herf="#" id="haloword-add" class="haloword-button" title="加入单词表"></a>
+                    <a herf="#" id="haloword-remove" class="haloword-button" title="移出单词表"></a>
+                    <a href="https://www.id.iit.edu/news/news-2014/vijay-user-friendly-2014/#" id="haloword-open" class="haloword-button" title="查看单词详细释义" target="_blank"></a>
+                    <a herf="#" id="haloword-close" class="haloword-button" title="关闭查询窗"></a>
+                </div>
+                <br style="clear: both;">
+            </div>
+            <div id="haloword-content"></div>
+        </div>
+    </body>
+
+</html>

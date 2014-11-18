@@ -1,0 +1,40 @@
+ .events {
+    background-color: #008000;
+    float: left;
+    margin: 10px;
+    width: 25%;
+ }
+ .news {
+    background-color: #008000;
+    float: left;
+    margin: 10px;
+    width: 25%;
+ }
+ #manage_block {
+    background: #0000FF;
+    float: left;
+    width: 15%
+ }
+}
+#manage_block li {
+    color: #00000;
+    font-size: large;
+}
+.right_slide {
+    background-color: #0000FF;
+    font-size: larger;
+    float: right;
+    width: 30%;
+}
+#mainbody_container {
+    height: 500px;
+}
+a {
+    color: #00FFFF;
+}
+.left_float {
+    float: left;
+}
+
+
+
